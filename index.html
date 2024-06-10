@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amancio JR</title>
+    <meta property="og:title" content="Amancio JR" />
+    <meta
+      property="og:description"
+      content="Site Oficial do Ministro de Louvor Amancio JR."
+    />
+    <meta property="og:url" content="https://amanciojunior.com.br" />
+    <meta
+      property="og:image"
+      content="https://amanciojunior.com.br/assets/violao.jpeg"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Outros metadados comuns -->
+    <meta
+      name="description"
+      content="Para baixar canções do Amancio, para ver vídeos, entre outros "
+    />
+    <meta name="keywords" content="louvor, gospel, adoração, worship, site" />
+    <meta name="author" content="Amancio JR" />
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .ricardo {
+        position: relative;
+        float: right;
+        border: none;
+        border-radius: 50px;
+        z-index: 1;
+        margin-left: 30px;
+        width: 400px;
+        height: 640px;
+
+        border-radius: 20px;
+      }
+
+      .home {
+        color: rgb(238, 240, 240);
+        text-align: left;
+        margin-right: 50px;
+        text-align: center;
+      }
+
+      .baixo {
+        top: 40px;
+        float: right;
+        width: 110px;
+        height: 150px;
+        padding-left: 15px;
+        border-radius: 20px;
+      }
+
+      .bass {
+        text-align: center;
+        background-color: rgb(59, 82, 63);
+        color: white;
+        padding: 10px;
+      }
+
+      .violao {
+        top: 40px;
+        width: 250px;
+        height: 350px;
+        left: -10px;
+      }
+
+      /* Estilo da seção para centralizar horizontalmente */
+      #contato {
+        text-align: center;
+        border: 1px solid #000; /* Apenas para visualização, remova se não necessário */
+      }
+
+      /* Estilo da imagem .violao */
+      .violao {
+        width: 250px; /* Ajuste a largura conforme necessário */
+        height: 350px; /* Ajuste a altura conforme necessário */
+        display: inline-block; /* Necessário para que o text-align funcione */
+        object-fit: cover; /* Ajusta a imagem, mantendo a proporção */
+      }
+
+      .meurefugio {
+        border: 2px solid white;
+        width: 250px;
+        height: 250px;
+        margin-right: 5px;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
+      }
+
+      .cd {
+        border: 2px solid white;
+        width: 250px;
+        height: 250px;
+        margin-right: 5px;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      .mrefugio {
+        border: 2px solid white;
+        width: 250px;
+        height: 250px;
+        margin-right: 5px;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+
+        background-color: #3d4145; /* Cor de fundo */
+        color: #fff; /* Cor do texto */
+        text-decoration: none; /* Remove o sublinhado padrão */
+        border: none; /* Remove a borda padrão */
+        border-radius: 20px; /* Borda arredondada */
+        cursor: pointer; /* Altera o cursor ao passar por cima */
+        transition: background-color 0.3s; /* Transição suave da cor de fundo */
+      }
+
+      /* Estilo hover para o link dentro do botão */
+      .button-link:hover {
+        background-color: #75818e; /* Altera a cor de fundo ao passar o mouse */
+      }
+
+      abbr[title] {
+        border-bottom: none !important; /* Remove a borda pontilhada */
+        text-decoration: none !important; /* Remove qualquer decoração de texto */
+        cursor: help; /* Mantém o cursor de ajuda */
+      }
+      #home {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo" style="text-align: center">RICARDO JR NUTRI</div>
+      <div class="menu-icon" id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#biografia">BIOGRAFIA</a></li>
+          <li><a href="#resultados">RESULTADOS</a></li>
+          <li><a href="#videos">VIDEOS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="./assets/reflita1.jpeg" alt="Slide 1" />
+      </div>
+      <div class="slide fade">
+        <img src="./assets/reflita2.jpeg" alt="Slide 2" />
+      </div>
+      <!-- <div class="slide fade">
+    <img src="./assets/img3.jpg" alt="Slide 3">
+    </div>
+    <div class="slide fade">
+    <img src="./assets/img4.png" alt="Slide 4">
+    </div> -->
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <main id="main-content">
+      <br />
+      <br />
+      <section
+        class="w50 fade-in float"
+        style="display: flex; position: relative"
+      >
+        <div class="ricardo">
+          <img src="./assets/ricardo.jpeg" alt="" />
+        </div>
+      </section>
+      <br />
+      <section id="home" class="fade-in w50" style="z-index: 4">
+        <!--   <div class="happy"><h1 style="text-align: center; font-size: 80px;">Home</h1></div>
+        <div class="bday"><p style="font-weight: bold; text-align: center; font-size: 20px;">Que bom ter você por aqui!</p></div>  -->
+        &nbsp; &nbsp;
+
+        <p class="home" style="font-size: 25px">
+          &nbsp; &nbsp;Oi tudo bem ? Me chamo Ricardo Júnior! obrigado por está
+          aqui, e se você veio até aqui é porque não foi em vão. Posso lhe
+          ajudar da melhor forma e garanto lhe trazer resultados satisfatórios,
+          agora o porque você deveria me escolher: Então já fui paciente como
+          você e tinha uma meta em Ter resultados. Então procurei um
+          nutricionista para me ajudar e no final de tudo ele só me entregou uma
+          dieta e me deixou sozinho, e aquilo veio a me frustar, pois não tive
+          nenhuma assistência. Então resolvi entrar nas faculdades de nutrição e
+          educação física, e daí hoje me formei e vim trazendo uma forma
+          inovadora para vocês. Eu ajudo todos os meus pacientes a chegar na sua
+          melhor versão,sendo com minha ajuda através do WhatsApp, sim é isso
+          mesmo! Eu dou assistências a todos os meus Pacientes de segunda a
+          sábado cobrando as obrigações. Ah, e tem mais, você tem direito a uma
+          plataforma de treino exclusivamente só para você e tudo no pacote!
+          eae? Está disposto(a) a mudança mesmo, Então acessa o meu WhatsApp
+          clicando aqui, estou aguardando vocês!
+        </p>
+      </section>
+
+      <br /><br />
+      <section
+        id="biografia"
+        class="fade-in bass w50"
+        style="background: rgb(59, 82, 63)"
+      >
+        <div class="happy">
+          <h1
+            style="
+              text-align: center;
+              position: relative;
+              background: rgb(59, 82, 63);
+            "
+          >
+            Biografia
+          </h1>
+        </div>
+        <div class="bday">
+          <p
+            style="
+              text-align: center;
+              font-weight: bold;
+              font-size: 18px;
+              margin-top: 2px;
+            "
+          >
+            Sobre Mim
+          </p>
+        </div>
+        <br />
+        <div class="container">
+          <div class="down">
+            <div class="box">
+              <img src="./assets/sobremim1.jpeg" alt="" />
+              <div class="text">
+                <h2 class="color-branco">Formação</h2>
+                <p class="color-branco">
+                  Sou educador físico bacharelado e nutricionista clínico,
+                  esportivo e estética e pós graduando em nutrição clínica
+                  esportiva e, exames laboratoriais!
+                </p>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/sobremim2.jpeg" alt="" />
+              <div class="text">
+                <h2 class="color-branco">Educação Física</h2>
+                <p class="color-branco">
+                  Tenho várias especializações em educação Física: Correção
+                  postural, Alongamentos, Biomecânica, Avaliador físico
+                </p>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/sobremim3.jpeg" alt="" />
+              <div class="text">
+                <h2 class="color-branco">Nutrição</h2>
+                <p class="color-branco">
+                  Também tenho em Nutrição, algumas especializações: Nutrição
+                  estética, Nutrição esportiva, Nutrição clínica
+                </p>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <section
+        id="resultados"
+        class="fade-in bass w50"
+        style="background: #001105; border-radius: 20px"
+      >
+        <div
+          class="happy"
+          style="background-color: #001105; text-align: center"
+        >
+          <h1>Resultados</h1>
+        </div>
+        <div class="bday"><h3>Confira alguns Resultados</h3></div>
+        <br /><br />
+
+        <section class="fade-in w50 float">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/resultado1.png" alt="imagem 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/resultado2.png" alt="imagem 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/resultado3.png" alt="imagem 3" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="fade-in w50 float">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/reflita1.jpeg" alt="imagem 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/reflita2.jpeg" alt="imagem 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/reflita3.jpeg" alt="imagem 3" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="fade-in w50 float">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/sobremim1.jpeg" alt="imagem 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/sobremim2.jpeg" alt="imagem 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/sobremim3.jpeg" alt="imagem 3" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="fade-in w50">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/ricardo capa.png" alt="imagem 1" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/ricardo.jpeg" alt="imagem 2" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/sobremim2.jpeg" alt="imagem 3" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <br />
+      <section class="w50 fade-in">
+        <h1 style="font-family: cursive; font-size: 50px; text-align: center">
+          Fotos
+        </h1>
+        <br />
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/familia.jpeg" alt="imagem 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/baixo.jpeg" alt="imagem 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/violao2.jpeg" alt="imagem 3" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/img1.jpg" alt="imagem 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/teclado1.jpeg" alt="imagem 5" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/solo1.png" alt="imagem 6" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/pregando.jpeg" alt="imagem 7" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <section
+        class="fade-in w50 videos"
+        id="videos"
+        style="background-color: #272222; border-radius: 50px"
+      >
+        <br />
+        <h1 style="text-align: center; font-size: 20px">
+          Músicas - Videos - Pregações
+        </h1>
+
+        <details>
+          <summary style="text-align: center">
+            <span style="background-color: #3d4145"
+              >Clique aqui para Assistir</span
+            >
+            <br /><br />
+          </summary>
+          <div class="video-gallery">
+            <div class="video-container" id="video1"></div>
+            <div class="video-container" id="video2"></div>
+            <div class="video-container" id="video3"></div>
+            <div class="video-container" id="video4"></div>
+          </div>
+        </details>
+      </section>
+      <section
+        style="display: grid; align-items: center; justify-content: center"
+        class="fade-in w50"
+      >
+        <img class="violao" src="./assets/violao.jpeg" alt="" />
+      </section>
+      <section id="contato" class="fade-in w50">
+        <div class="happy">
+          <h1 style="font-size: 35px">Contato / Agenda</h1>
+        </div>
+        <div class="bday">
+          <p
+            style="
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif;
+              font-size: 20px;
+              margin-top: 10px;
+            "
+          >
+            Entre em contato conosco.
+          </p>
+        </div>
+
+        <div class="container">
+          <form
+            action="https://formsubmit.co/ajax/9ec83d3ee01522185f0387f9b90284cd"
+            method="POST"
+            data-form
+            id="myForm"
+            class="form"
+          >
+            <div class="input-group">
+              <input
+                type="text"
+                id="nome"
+                placeholder="Nome"
+                name="Nome"
+                required
+              />
+              <input
+                type="text"
+                id="sobrenome"
+                placeholder="Sobrenome"
+                name="Sobrenome"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" placeholder="E-mail" required />
+              <input
+                type="tel"
+                id="celular"
+                placeholder="Celular WhatsApp"
+                name="Celular WhatsApp"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                id="mensagem"
+                placeholder="Mensagem"
+                name="Mensagem"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" data-button>Enviar</button>
+            <br />
+          </form>
+        </div>
+      </section>
+      <a href="#" class="back-to-top" id="back-to-top">&#8679;</a>
+    </main>
+    <br /><br />
+
+    <footer>
+      <div id="social-links">
+        <a href="https://instagram.com/junior.amancio" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon
+        ></a>
+        <a href="https://youtube.com/amancio131079" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon
+        ></a>
+        <a
+          href="https://www.facebook.com/?locale=pt_BR"
+          title="Facebook"
+          target="_blank"
+        >
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://wa.me/5581996174799" target="_blank">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </div>
+      <p>
+        &copy; 2024 Site criado por <br /><button class="a">
+          <a
+            style="color: rgb(94, 154, 200); font-weight: bold"
+            href="https://wa.me/5581996174799"
+            >Amancio JR.</a
+          >
+        </button>
+        <br />
+        Todos os direitos reservados.
+      </p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      document.addEventListener("click", function (event) {
+        var menuToggle = document.querySelector(".menu-toggle")
+        var nav = document.querySelector(".nav")
+
+        if (!menuToggle.contains(event.target) && !nav.contains(event.target)) {
+          nav.classList.remove("active")
+        }
+      })
+    </script>
+    <script>
+      function toggleMenu() {
+        var nav = document.querySelector(".nav")
+        nav.classList.toggle("active")
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var menuItems = document.querySelectorAll(".nav ul li a")
+
+        menuItems.forEach(function (item) {
+          item.addEventListener("click", function () {
+            var nav = document.querySelector(".nav")
+            nav.classList.remove("active")
+          })
+        })
+      })
+    </script>
+
+    <script>
+      let currentPlayers = {} // Armazenar os players atuais
+
+      // IDs dos vídeos do YouTube
+      const videoIds = [
+        "TDFydKZ1pXI",
+        "q_FMxi42-co",
+        "qWCrObxTJAE",
+        "GBy5t29r-kg",
+      ]
+
+      // Função para carregar vídeos do YouTube no container
+      function loadYouTubeVideo(containerId, videoId) {
+        const player = new YT.Player(containerId, {
+          height: "315",
+          width: "340",
+          videoId: videoId,
+          events: {
+            onReady: function (event) {
+              console.log("Player pronto:", event.target.getVideoUrl())
+
+              //event.target.playVideo(); // Iniciar o vídeo quando estiver pronto
+              currentPlayers[containerId] = event.target
+            },
+            onStateChange: function (event) {
+              console.log("Estado do player mudou para", event.data)
+              onPlayerStateChange(event, event.target)
+            },
+          },
+        })
+      }
+
+      // Função chamada quando o estado do player muda
+      function onPlayerStateChange(event, currentPlayer) {
+        if (event.data === YT.PlayerState.PLAYING) {
+          console.log("Iniciando a reprodução, pausando outros players...")
+          pauseOtherPlayers(currentPlayer)
+        }
+      }
+
+      // Função para pausar outros players
+      function pauseOtherPlayers(currentPlayer) {
+        console.log("Pausando outros players...")
+        for (const containerId in currentPlayers) {
+          if (currentPlayers.hasOwnProperty(containerId)) {
+            const player = currentPlayers[containerId]
+            if (player && player !== currentPlayer) {
+              console.log("Pausando o player", player.getVideoUrl())
+              player.pauseVideo()
+            }
+          }
+        }
+      }
+
+      // Iniciar vídeos quando o documento estiver carregado
+      window.onload = function () {
+        if (typeof YT !== "undefined" && YT.loaded) {
+          console.log("API do YouTube está pronta")
+          const videoContainers = document.querySelectorAll(".video-container")
+          videoContainers.forEach((container, index) => {
+            loadYouTubeVideo(container.id, videoIds[index % videoIds.length])
+          })
+        } else {
+          console.error("A API do YouTube não está carregada.")
+        }
+      }
+    </script>
+  </body>
+</html>
