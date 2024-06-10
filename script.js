@@ -43,21 +43,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /////
 
-// primeiro slide
-
-// slides 2
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Initializing Swiper...")
-  const swiper = new Swiper(".swiper-container", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    spaceBetween: 1,
-    grabCursor: true,
-  })
-  console.log("Swiper initialized:", swiper)
-})
-
-

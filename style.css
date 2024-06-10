@@ -470,61 +470,6 @@ span {
 
 /* #### Fim do About #### */
 
-/* Aqui começa o primeiro slide */
-
-.swiper-container {
-  position: relative;
-  width: 70%;
-  max-width: 370px;
-  min-width: 340px;
-  height: 375px; /* Altura fixa para o carrossel */
-  box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  border: 1px solid white;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  color: #fff;
-  height: 100%; /* Ajusta a altura para preencher o contêiner */
-}
-
-.swiper-slide img {
-  position: relative;
-  width: 300%;
-  height: 250%;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Estilos para desktop */
-@media screen and (min-width: 768px) {
-  .swiper-container {
-    margin: 0 auto; /* Centraliza o contêiner */
-  }
-}
-
-/* Estilos para dispositivos móveis */
-@media screen and (max-width: 767px) {
-  .swiper-container {
-    margin-left: auto; /* Centraliza o contêiner */
-    margin-right: auto; /* Centraliza o contêiner */
-  }
-}
-
 /* #### Service #### */
 
 #Service .titulo h2 {
