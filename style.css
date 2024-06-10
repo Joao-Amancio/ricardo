@@ -13,11 +13,11 @@ body {
   height: 100%;
   background: linear-gradient(to right, #b2f7b2, #ffffff);
 }
-
+/*
 .max-width {
   width: 100%;
   min-height: auto;
-}
+} */
 
 /* .bg {
   background: url("image/bg-2.png") no-repeat;
@@ -39,7 +39,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
 .text-gd {
