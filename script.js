@@ -113,7 +113,7 @@ function plusSlides(n) {
 }
 
 // Touch-screen and mouse support
-let touchStartX = 0
+/*  let touchStartX = 0
 let touchEndX = 0
 
 function handleTouchStart(event) {
@@ -154,7 +154,7 @@ document.addEventListener("touchmove", handleTouchMove, false)
 document.addEventListener("touchend", handleTouchEnd, false)
 
 document.addEventListener("mousedown", handleMouseDown, false)
-document.addEventListener("mouseup", handleMouseUp, false)
+document.addEventListener("mouseup", handleMouseUp, false) */
 
 // slides 2
 document.addEventListener("DOMContentLoaded", function () {

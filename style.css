@@ -107,7 +107,7 @@ body {
   width: 100%;
   height: auto;
 }
-
+/*
 .prev,
 .next {
   position: absolute;
@@ -127,21 +127,23 @@ body {
 .prev,
 .next {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
-  outline: none; /* Remove o contorno de foco */
-}
+/* outline: none; /* Remove o contorno de foco } */
 
+/*
 .prev {
   left: 0;
 }
 
 .next {
   right: 0;
-}
+} */
 
 /* carrossel 2*/
 
 .swiper-container {
   position: relative;
+  justify-content: center;
+  align-items: center;
   width: 70%;
   max-width: 370px;
   min-width: 340px;
@@ -159,9 +161,10 @@ body {
 
 .swiper-slide {
   display: flex;
+
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 5px;
   color: #fff;
   height: 100%; /* Ajusta a altura para preencher o contêiner */
 }
@@ -176,7 +179,17 @@ body {
 /* Estilos para desktop */
 @media screen and (min-width: 768px) {
   .swiper-container {
-    margin: 0 auto; /* Centraliza o contêiner */
+    margin: 38px; /* Centraliza o contêiner */
+  }
+
+  .ultimo {
+    top: 38px;
+  }
+  .resultados {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 
@@ -588,8 +601,6 @@ summary::-webkit-details-marker {
   display: none; /* Remove a seta no Safari */
 }
 
-
-
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -748,7 +759,6 @@ span {
   .home {
     display: block;
     text-align: center;
-    
   }
 
   .down {
@@ -772,5 +782,17 @@ span {
 
   #biografia .right img {
     width: 60%;
+  }
+
+  #resultados {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .swiper-container {
+    width: 100px;
+    margin: 38px;
   }
 }
