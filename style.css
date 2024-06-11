@@ -588,31 +588,7 @@ summary::-webkit-details-marker {
   display: none; /* Remove a seta no Safari */
 }
 
-.imagem-girando {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  animation: girar 6s linear infinite; /* Aplica a animação */
-  border-radius: 50%;
-}
 
-.imagem-girando2 {
-  position: relative;
-
-  height: 200x;
-  width: 200px;
-  animation: girar 6s linear infinite; /* Aplica a animação */
-}
-
-/* Define a animação */
-@keyframes girar {
-  from {
-    transform: rotate(0deg); /* Começa a girar a partir de 0 graus */
-  }
-  to {
-    transform: rotate(360deg); /* Completa uma rotação completa (360 graus) */
-  }
-}
 
 .back-to-top {
   position: fixed;
@@ -745,7 +721,7 @@ span {
   font-style: italic;
 }
 
-/* BIOGRAFIA RESPONSIVO */
+/* RESPONSIVO */
 @media screen and (max-width: 740px) {
   .ricardo {
     display: flex;
@@ -772,7 +748,7 @@ span {
   .home {
     display: block;
     text-align: center;
-    margin-left: 50px;
+    
   }
 
   .down {

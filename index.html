@@ -33,24 +33,24 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <style>
-      .ricardo {
+      .ricardo img {
+        float: left;
         position: relative;
-        float: right;
         border: none;
         border-radius: 50px;
-        z-index: 1;
-        margin-left: 30px;
-        width: 400px;
-        height: 640px;
-
         border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+        height: 400px;
       }
 
       .home {
         color: rgb(238, 240, 240);
-        text-align: left;
-        margin-right: 50px;
         text-align: center;
+        margin: 0;
       }
 
       .baixo {
@@ -67,6 +67,9 @@
         background-color: rgb(59, 82, 63);
         color: white;
         padding: 10px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
       }
 
       .violao {
@@ -141,6 +144,7 @@
         text-decoration: none !important; /* Remove qualquer decoração de texto */
         cursor: help; /* Mantém o cursor de ajuda */
       }
+
       #home {
         position: relative;
       }
@@ -184,21 +188,17 @@
     <main id="main-content">
       <br />
       <br />
-      <section
-        class="w50 fade-in float"
-        style="display: flex; position: relative"
-      >
-        <div class="ricardo">
-          <img src="./assets/ricardo.jpeg" alt="" />
-        </div>
-      </section>
+
       <br />
       <section id="home" class="fade-in w50" style="z-index: 4">
         <!--   <div class="happy"><h1 style="text-align: center; font-size: 80px;">Home</h1></div>
         <div class="bday"><p style="font-weight: bold; text-align: center; font-size: 20px;">Que bom ter você por aqui!</p></div>  -->
         &nbsp; &nbsp;
-
-        <p class="home" style="font-size: 25px">
+        <div class="ricardo">
+          <img src="./assets/ricardo.jpeg" alt="" />
+        </div>
+        <br /><br />
+        <p class="home" style="font-size: 18px">
           &nbsp; &nbsp;Oi tudo bem ? Me chamo Ricardo Júnior! obrigado por está
           aqui, e se você veio até aqui é porque não foi em vão. Posso lhe
           ajudar da melhor forma e garanto lhe trazer resultados satisfatórios,
