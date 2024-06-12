@@ -209,8 +209,8 @@ body {
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 767px) {
   .swiper-container {
-    margin-left: auto; /* Centraliza o contêiner */
-    margin-right: auto; /* Centraliza o contêiner */
+    /*margin-left: auto; /* Centraliza o contêiner */
+   /* margin-right: auto; /* Centraliza o contêiner */
     justify-content: center;
     align-items: center;
     display: flex;
