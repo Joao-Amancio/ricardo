@@ -836,9 +836,5 @@ span {
     margin: 0;
     padding: 0;
   }
-  .text,
-  .color-branco {
-    position: relative;
-    margin-left: 50px;
-  }
+  
 }
