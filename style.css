@@ -833,7 +833,7 @@ span {
     margin: 38px;
     box-sizing: border-box;
     padding: 0;
-    margin-right: 20px;
+    margin-right: 0;
   }
 
   .swiper-slide {
