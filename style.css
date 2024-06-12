@@ -817,17 +817,7 @@ span {
     width: 60%;
   }
 
-  .resultados {
-    display: grid;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0%;
-  }
-
   .swiper-container {
-    width: 100px;
     margin: 38px;
   }
 
