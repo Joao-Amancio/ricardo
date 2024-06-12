@@ -27,8 +27,9 @@ body {
   text-align: center;
   backface-visibility: hidden;
   font-size: 36px;
-
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .bday {
@@ -47,7 +48,6 @@ body {
   background: rgb(59, 82, 63);
   background-size: cover;
   padding: 20px;
-
   margin-left: 0;
   margin-right: 0;
   top: 0;
@@ -63,6 +63,14 @@ body {
   color: #868686;
   letter-spacing: 2px;
   transition: 1s;
+}
+
+.text,
+.color-branco {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes motion {
@@ -139,7 +147,7 @@ body {
 } */
 
 /* carrossel 2*/
-
+/*
 .swiper-container {
   position: relative;
   justify-content: center;
@@ -147,11 +155,26 @@ body {
   width: 70%;
   max-width: 370px;
   min-width: 340px;
-  height: 475px; /* Altura fixa para o carrossel */
+  height: 475px; /* Altura fixa para o carrossel 
   box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
+  border: 1px solid white;
+} */
+
+.swiper-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 370px;
+  min-width: 340px;
+  height: 375px; /* Altura fixa para o carrossel */
+  box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: transparent;
   border: 1px solid white;
 }
 
@@ -170,8 +193,8 @@ body {
 }
 
 .swiper-slide img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -184,12 +207,6 @@ body {
 
   .ultimo {
     top: 38px;
-  }
-  .resultados {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -684,6 +701,10 @@ section.visible {
   transition: 0.5s ease;
 }
 
+#biografia {
+  margin-top: 0;
+}
+
 #biografia .container {
   flex-direction: column;
   align-items: flex-start;
@@ -732,6 +753,10 @@ span {
   font-style: italic;
 }
 
+#resultados {
+  margin-top: -130px;
+}
+
 /* RESPONSIVO */
 @media screen and (max-width: 740px) {
   .ricardo {
@@ -771,6 +796,10 @@ span {
     width: 100%;
   }
 
+  #biografia {
+    margin-top: -150px;
+  }
+
   #biografia .box img {
     width: 90%;
     margin-top: 20px;
@@ -784,15 +813,32 @@ span {
     width: 60%;
   }
 
-  #resultados {
+  .resultados {
     display: grid;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0%;
   }
 
   .swiper-container {
     width: 100px;
     margin: 38px;
+  }
+
+  #resultados {
+    margin-top: -150px;
+  }
+
+  .home {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  .text,
+  .color-branco {
+    position: relative;
+    margin-left: 50px;
   }
 }
