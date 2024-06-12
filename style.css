@@ -818,11 +818,19 @@ span {
   }
 
   .swiper-container {
-    margin: 38px;
-    display: block;
+    position: relative;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    width: 100%;
+    max-width: 370px;
+    min-width: 340px;
+    height: 375px; /* Altura fixa para o carrossel */
+    box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid white;
+    margin: 38px;
   }
 
   #resultados {
