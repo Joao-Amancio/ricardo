@@ -210,7 +210,7 @@ body {
 @media screen and (max-width: 767px) {
   .swiper-container {
     /*margin-left: auto; /* Centraliza o contêiner */
-   /* margin-right: auto; /* Centraliza o contêiner */
+    /* margin-right: auto; /* Centraliza o contêiner */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -821,9 +821,9 @@ span {
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 350px;
-    min-width: 350px;
+    width: 70%;
+    max-width: 370px;
+    min-width: 340px;
     height: 375px; /* Altura fixa para o carrossel */
     box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
     border-radius: 10px;
