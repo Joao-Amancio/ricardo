@@ -40,8 +40,7 @@
         height: 100vh; /* Ajusta de acordo com a altura desejada */
       }
 
-      .ricardo { 
-           
+      .ricardo {
         position: relative;
         border: none;
         border-radius: 20px;
@@ -152,6 +151,13 @@
       #home {
         position: relative;
       }
+
+      #resultados {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -167,6 +173,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#biografia">BIOGRAFIA</a></li>
           <li><a href="#resultados">RESULTADOS</a></li>
+          <li><a href="#destaque">DESTAQUE</a></li>
           <li><a href="#videos">VIDEOS</a></li>
           <li><a href="#contato">CONTATO</a></li>
         </ul>
@@ -278,32 +285,31 @@
                 <i class="fa fa-long-arrow-right"></i>
               </div>
             </div>
-                       
-                <div class="box">
-                  <img src="./assets/sobremim2.jpeg" alt="" />
-                  <div class="text">
-                    <h2 class="color-branco">Educação Física</h2>
-                    <p class="color-branco">
-                      Tenho várias especializações em educação Física: Correção
-                      postural, Alongamentos, Biomecânica, Avaliador físico
-                    </p>
-                    <i class="fa fa-long-arrow-right"></i>
-                  </div>
-                </div>
-                <div class="box">
-                  <img src="./assets/sobremim3.jpeg" alt="" />
-                  <div class="text">
-                    <h2 class="color-branco">Nutrição</h2>
-                    <p class="color-branco">
-                      Também tenho em Nutrição, algumas especializações:
-                      Nutrição estética, Nutrição esportiva, Nutrição clínica
-                    </p>
-                    <i class="fa fa-long-arrow-right"></i>
-                  </div>
-                </div>              
+
+            <div class="box">
+              <img src="./assets/sobremim2.jpeg" alt="" />
+              <div class="text">
+                <h2 class="color-branco">Educação Física</h2>
+                <p class="color-branco">
+                  Tenho várias especializações em educação Física: Correção
+                  postural, Alongamentos, Biomecânica, Avaliador físico
+                </p>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./assets/sobremim3.jpeg" alt="" />
+              <div class="text">
+                <h2 class="color-branco">Nutrição</h2>
+                <p class="color-branco">
+                  Também tenho em Nutrição, algumas especializações: Nutrição
+                  estética, Nutrição esportiva, Nutrição clínica
+                </p>
+                <i class="fa fa-long-arrow-right"></i>
+              </div>
+            </div>
           </div>
         </div>
-        
       </section>
 
       <section id="resultados" class="fade-in bass w50">
@@ -311,12 +317,17 @@
           <h1>Resultados</h1>
         </div>
         <div class="bday"><h3>Confira alguns Resultados</h3></div>
+        <br />
+        <p style="font-size: 20px">
+          Tenha acesso agora mesmo agora mesmo a uma consultoria que realmente
+          funciona
+        </p>
+        <br />
+        <button><p style="font-size: 20px">Consultoria - Clique Aqui</p></button
+        ><br />
         <br /><br />
 
-        <div
-          class="swiper-container float"
-          style="justify-content: center; align-items: center"
-        >
+        <div class="swiper-container float">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./assets/glaci1.jpeg" alt="imagem 1" />
@@ -334,10 +345,7 @@
           </div>
         </div>
 
-        <div
-          class="swiper-container"
-          style="justify-content: center; align-items: center"
-        >
+        <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./assets/igor1.jpeg" alt="imagem 1" />
@@ -354,10 +362,7 @@
           </div>
         </div>
 
-        <div
-          class="swiper-container float"
-          style="justify-content: center; align-items: center"
-        >
+        <div class="swiper-container float">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./assets/result1.jpeg" alt="imagem 1" />
@@ -374,10 +379,7 @@
           </div>
         </div>
 
-        <div
-          class="swiper-container ultimo"
-          style="justify-content: center; align-items: center"
-        >
+        <div class="swiper-container ultimo">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <img src="./assets/resultado1.png" alt="imagem 1" />
@@ -394,33 +396,33 @@
       </section>
 
       <br />
-      <section class="w50 fade-in">
-        <h1 style="font-family: cursive; font-size: 50px; text-align: center">
-          Fotos
-        </h1>
-        <br />
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./assets/familia.jpeg" alt="imagem 1" />
+      <section id="destaque" class="fade-in max-width bg">
+        <div class="container">
+          <div class="content">
+            <div class="titulo">
+              <h2 class="text-md color-cinza-1">Destaque</h2>
+              <div class="line">
+                <div class="text-titulo">Você também pode!</div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="./assets/baixo.jpeg" alt="imagem 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/violao2.jpeg" alt="imagem 3" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/img1.jpg" alt="imagem 4" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/teclado1.jpeg" alt="imagem 5" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/solo1.png" alt="imagem 6" />
-            </div>
-            <div class="swiper-slide">
-              <img src="./assets/pregando.jpeg" alt="imagem 7" />
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <div class="cards">
+              <label class="card" for="item-1" id="song-1">
+                <img src="./assets/glaci1.jpeg" alt="" />
+                <button>Consultoria</button>
+              </label>
+
+              <label class="card" for="item-2" id="song-2">
+                <img src="./assets/glaci2.jpeg" />
+                <button>Consultoria</button>
+              </label>
+
+              <label class="card" for="item-3" id="song-3">
+                <img src="./assets/glaci3.jpeg" />
+                <button>Consultoria</button>
+              </label>
             </div>
           </div>
         </div>

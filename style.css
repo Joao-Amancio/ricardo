@@ -868,4 +868,213 @@ span {
   #rico {
     display: none;
   }
+
+  .swiper-container {
+    margin: 10px;
+  }
+}
+
+/* NOVO CARROSSEL DESTAQUE */
+
+.max-width {
+  width: 100%;
+  min-height: auto;
+}
+
+.container {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 95vh;
+}
+
+.text-md {
+  font-size: 42px;
+}
+
+.text-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.color-azul {
+  color: #1b3b56;
+}
+
+.color-azul-1 {
+  color: #5271ff;
+}
+
+.color-cinza-2 {
+  color: #545454;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1b3b56;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.8s ease;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+button:hover {
+  border: 1px solid #8b634a;
+  background: #443933;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 0 2%;
+  width: 100%;
+  min-height: 800px;
+}
+
+.titulo {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 40px;
+  text-shadow: 0 0 10px #545454;
+  color: #2b2b2b;
+}
+.line {
+  width: 80%;
+  height: 2px;
+  background: #17203f;
+  position: relative;
+  top: 40px;
+}
+
+.text-titulo {
+  position: relative;
+  top: -10px;
+  z-index: 99;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+  font-size: 18px;
+  background: #cfb2a0;
+  color: #fff;
+}
+
+#destaque .titulo h2 {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+#destaque .box {
+  width: 80%;
+  background: #fff;
+}
+
+#destaque .box img {
+  width: 300px;
+  height: 500px;
+  object-fit: contain;
+}
+
+#destaque .box h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#destaque .box p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#destaque .container input[type="radio"] {
+  display: none;
+}
+#destaque .container .card {
+  position: absolute;
+  width: 40%;
+  height: 80%;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: 0 0 10px 0 #848790;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+#destaque .container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#destaque .container .card button {
+  position: absolute;
+  bottom: 10px;
+  z-index: 9;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#destaque .container .cards {
+  position: relative;
+  width: 80%;
+  height: 80vh;
+}
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2 {
+  transform: translateX(-100%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1 {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* #### Responsivo #### */
+
+@media screen and (max-width: 648px) {
+  #destaque .container .card {
+    width: 80%;
+    height: auto;
+    top: -20px;
+  }
+
+  #item-1:checked ~ .cards #song-3,
+  #item-2:checked ~ .cards #song-1,
+  #item-3:checked ~ .cards #song-2 {
+    transform: translateY(-0%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  #item-1:checked ~ .cards #song-2,
+  #item-2:checked ~ .cards #song-3,
+  #item-3:checked ~ .cards #song-1 {
+    transform: translateY(25%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
 }
