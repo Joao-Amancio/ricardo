@@ -831,7 +831,11 @@ span {
     background-color: transparent;
     border: 1px solid white;
     margin: 38px;
+    box-sizing: border-box;
+    padding: 0;
   }
+
+  
 
   .swiper-slide {
     display: flex;
