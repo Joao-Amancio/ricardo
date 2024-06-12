@@ -140,7 +140,14 @@ body {
 } */
 
 /* carrossel 2*/
-/*
+
+#resultados {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Garante que o conteúdo seja centralizado verticalmente */
+}
+
 .swiper-container {
   position: relative;
   justify-content: center;
@@ -148,13 +155,13 @@ body {
   width: 70%;
   max-width: 370px;
   min-width: 340px;
-  height: 475px; /* Altura fixa para o carrossel 
+  height: 475px; /* Altura fixa para o carrossel */
   box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
   border: 1px solid white;
-} */
+}
 
 .swiper-container {
   position: relative;
@@ -227,8 +234,6 @@ body {
   margin-left: 20px;
   box-shadow: 10px 5px 5px black;
 }
-
-
 
 .menu-icon {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
@@ -815,6 +820,7 @@ span {
     width: 60%;
   }
 
+  /*
   .swiper-container {
     position: relative;
     justify-content: center;
@@ -822,7 +828,7 @@ span {
     width: 70%;
     max-width: 450px;
     min-width: 350px;
-    height: 375px; /* Altura fixa para o carrossel */
+    height: 375px;  Altura fixa para o carrossel 
     box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
     border-radius: 10px;
     overflow: hidden;
@@ -840,7 +846,7 @@ span {
     align-items: center;
     font-size: 5px;
     color: #fff;
-    height: 100%; /* Ajusta a altura para preencher o contêiner */
+    height: 100%; /* Ajusta a altura para preencher o contêiner 
   }
 
   .swiper-slide img {
@@ -857,7 +863,7 @@ span {
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
+  }   */
 
   #rico {
     display: none;
