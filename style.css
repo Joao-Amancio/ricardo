@@ -822,7 +822,7 @@ span {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 370px;
+    max-width: 340px;
     min-width: 340px;
     height: 375px; /* Altura fixa para o carrossel */
     box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
