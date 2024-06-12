@@ -821,9 +821,9 @@ span {
     position: relative;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    max-width: 370px;
-    min-width: 340px;
+    width: 70%;
+    max-width: 450px;
+    min-width: 350px;
     height: 375px; /* Altura fixa para o carrossel */
     box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
     border-radius: 10px;
@@ -831,6 +831,23 @@ span {
     background-color: transparent;
     border: 1px solid white;
     margin: 38px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5px;
+    color: #fff;
+    height: 100%; /* Ajusta a altura para preencher o contêiner */
+  }
+
+  .swiper-slide img {
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 
   #resultados {
