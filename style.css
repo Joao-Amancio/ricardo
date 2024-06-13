@@ -949,12 +949,14 @@ button:hover {
   flex-direction: column;
   margin-top: 40px;
   text-shadow: 0 0 10px #545454;
-  color: #2b2b2b;
+  color: #f8f6f6;
+  font-family: cursive;
+  
 }
 .line {
   width: 80%;
   height: 2px;
-  background: #17203f;
+  background: #fafafc;
   position: relative;
   top: 40px;
 }
@@ -967,8 +969,14 @@ button:hover {
   text-align: center;
   width: 200px;
   font-size: 18px;
-  background: #cfb2a0;
-  color: #fff;
+  background: #faf9f9;
+  color: #0c0c0c;
+  border-radius: 20px;
+  font-family: cursive;
+}
+
+#destaque {
+  margin-top: 250px;
 }
 
 #destaque .titulo h2 {
@@ -1003,7 +1011,8 @@ button:hover {
   position: absolute;
   width: 40%;
   height: 80%;
-  top: -120px;
+  top: -80px;
+
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -1051,6 +1060,10 @@ button:hover {
   transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 1;
+}
+
+#videos {
+  margin-top: 120px;
 }
 
 /* #### Responsivo #### */

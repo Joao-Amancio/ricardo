@@ -158,6 +158,38 @@
         justify-content: center;
         align-items: center;
       }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 500%;
+        max-width: 500px;
+      }
+      .video-container {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        overflow: hidden;
+        background-color: #000;
+      }
+      .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 1024px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+          width: 100%;
+        }
+        .video-container {
+          padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        }
+      }
     </style>
   </head>
   <body>
@@ -173,7 +205,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#biografia">BIOGRAFIA</a></li>
           <li><a href="#resultados">RESULTADOS</a></li>
-          <li><a href="#destaque">DESTAQUE</a></li>
+          <li><a href="#destaque">DESTAQUES</a></li>
           <li><a href="#videos">VIDEOS</a></li>
           <li><a href="#contato">CONTATO</a></li>
         </ul>
@@ -400,7 +432,7 @@
         <div class="container">
           <div class="content">
             <div class="titulo">
-              <h2 class="text-md color-cinza-1">Destaque</h2>
+              <h2 class="text-md color-cinza-1">Destaques</h2>
               <div class="line">
                 <div class="text-titulo">Você também pode!</div>
               </div>
@@ -410,7 +442,7 @@
             <input type="radio" name="slider" id="item-3" />
             <div class="cards">
               <label class="card" for="item-1" id="song-1">
-                <img src="./assets/glaci1.jpeg" alt="" />
+                <img src="./assets/glaci3.jpeg" alt="" />
                 <button>Consultoria</button>
               </label>
 
@@ -420,18 +452,38 @@
               </label>
 
               <label class="card" for="item-3" id="song-3">
-                <img src="./assets/glaci3.jpeg" />
+                <img src="./assets/glaci1.jpeg" />
+                <button>Consultoria</button>
+              </label>
+            </div>
+
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <div class="cards">
+              <label class="card" for="item-1" id="song-1">
+                <img src="./assets/igor1.jpeg" alt="" />
+                <button>Consultoria</button>
+              </label>
+              <label class="card" for="item-2" id="song-2">
+                <img src="./assets/igor2.jpeg" />
+                <button>Consultoria</button>
+              </label>
+
+              <label class="card" for="item-3" id="song-3">
+                <img src="./assets/igor3.jpeg" />
                 <button>Consultoria</button>
               </label>
             </div>
           </div>
         </div>
       </section>
-      <br />
+      <br /><br />
+      <section></section>
       <section
         class="fade-in w50 videos"
         id="videos"
-        style="background-color: #272222; border-radius: 50px"
+        style="background-color: rgb(1, 21, 6); border-radius: 50px"
       >
         <br />
         <h1 style="text-align: center; font-size: 20px">
@@ -440,28 +492,58 @@
 
         <details>
           <summary style="text-align: center">
-            <span style="background-color: #3d4145"
+            <span style="background-color: rgb(8, 8, 8)"
               >Clique aqui para Assistir</span
             >
             <br /><br />
           </summary>
-          <div class="video-gallery">
+          <div class="grid-container">
+            <div class="video-container">
+              <video width="640" height="360" controls>
+                <source
+                  src="./videos/WhatsApp Video 2024-06-11 at 06.47.32.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="video-container">
+              <video width="640" height="360" controls>
+                <source
+                  src="./videos/WhatsApp Video 2024-06-11 at 06.51.00.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="video-container">
+              <video width="640" height="360" controls>
+                <source
+                  src="./videos/WhatsApp Video 2024-06-11 at 06.51.24.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div class="video-container">
+              <video width="640" height="360" controls>
+                <source
+                  src="./videos/WhatsApp Video 2024-06-11 at 07.27.16.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+
+          <!--  <div class="video-gallery">
             <div class="video-container" id="video1"></div>
             <div class="video-container" id="video2"></div>
             <div class="video-container" id="video3"></div>
             <div class="video-container" id="video4"></div>
-          </div>
+          </div> -->
         </details>
       </section>
-      <section
-        style="display: grid; align-items: center; justify-content: center"
-        class="fade-in w50"
-      >
-        <img class="violao" src="./assets/violao.jpeg" alt="" />
-      </section>
+
       <section id="contato" class="fade-in w50">
         <div class="happy">
-          <h1 style="font-size: 35px">Contato / Agenda</h1>
+          <h1 style="font-size: 35px; background: none">Contato / Agenda</h1>
         </div>
         <div class="bday">
           <p
@@ -598,71 +680,16 @@
     </script>
 
     <script>
-      let currentPlayers = {} // Armazenar os players atuais
-
-      // IDs dos vídeos do YouTube
-      const videoIds = [
-        "TDFydKZ1pXI",
-        "q_FMxi42-co",
-        "qWCrObxTJAE",
-        "GBy5t29r-kg",
-      ]
-
-      // Função para carregar vídeos do YouTube no container
-      function loadYouTubeVideo(containerId, videoId) {
-        const player = new YT.Player(containerId, {
-          height: "315",
-          width: "340",
-          videoId: videoId,
-          events: {
-            onReady: function (event) {
-              console.log("Player pronto:", event.target.getVideoUrl())
-
-              //event.target.playVideo(); // Iniciar o vídeo quando estiver pronto
-              currentPlayers[containerId] = event.target
-            },
-            onStateChange: function (event) {
-              console.log("Estado do player mudou para", event.data)
-              onPlayerStateChange(event, event.target)
-            },
-          },
-        })
-      }
-
-      // Função chamada quando o estado do player muda
-      function onPlayerStateChange(event, currentPlayer) {
-        if (event.data === YT.PlayerState.PLAYING) {
-          console.log("Iniciando a reprodução, pausando outros players...")
-          pauseOtherPlayers(currentPlayer)
-        }
-      }
-
-      // Função para pausar outros players
-      function pauseOtherPlayers(currentPlayer) {
-        console.log("Pausando outros players...")
-        for (const containerId in currentPlayers) {
-          if (currentPlayers.hasOwnProperty(containerId)) {
-            const player = currentPlayers[containerId]
-            if (player && player !== currentPlayer) {
-              console.log("Pausando o player", player.getVideoUrl())
-              player.pauseVideo()
+      // JavaScript para pausar outros vídeos quando um é reproduzido
+      document.querySelectorAll("video").forEach((video) => {
+        video.addEventListener("play", function () {
+          document.querySelectorAll("video").forEach((v) => {
+            if (v !== video) {
+              v.pause()
             }
-          }
-        }
-      }
-
-      // Iniciar vídeos quando o documento estiver carregado
-      window.onload = function () {
-        if (typeof YT !== "undefined" && YT.loaded) {
-          console.log("API do YouTube está pronta")
-          const videoContainers = document.querySelectorAll(".video-container")
-          videoContainers.forEach((container, index) => {
-            loadYouTubeVideo(container.id, videoIds[index % videoIds.length])
           })
-        } else {
-          console.error("A API do YouTube não está carregada.")
-        }
-      }
+        })
+      })
     </script>
   </body>
 </html>
