@@ -11,6 +11,7 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; /* Evita o scroll horizontal */
 }
 
 .header {
@@ -142,40 +143,33 @@ body {
 /* carrossel 2*/
 
 #resultados {
-  display: block;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Garante que o conteúdo seja centralizado verticalmente */
+  text-align: center;
 }
 
 .swiper-container {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 70%;
-  max-width: 370px;
-  min-width: 340px;
-  height: 475px; /* Altura fixa para o carrossel */
-  box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #fff;
-  border: 1px solid white;
-}
-
-.swiper-container {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 370px;
-  min-width: 340px;
-  height: 375px; /* Altura fixa para o carrossel */
+  width: calc(
+    100% - 60px
+  ); /* Ajusta a largura do contêiner com o espaço ao redor da imagem */
+  max-width: calc(
+    400px - 60px
+  ); /* Define a largura máxima com o espaço ao redor da imagem */
+  min-width: calc(
+    300px - 60px
+  ); /* Define a largura mínima com o espaço ao redor da imagem */
+  height: 395px; /* Altura fixa para o contêiner */
   box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
   border-radius: 10px;
   overflow: hidden;
   background-color: transparent;
   border: 1px solid white;
+  margin: 0 auto; /* Adicione a margem para centralizar em todas as larguras de tela */
+  transform: translateX(40%); /* Centraliza manualmente com base na largura */
 }
 
 .swiper-wrapper {
@@ -184,7 +178,6 @@ body {
 
 .swiper-slide {
   display: flex;
-
   justify-content: center;
   align-items: center;
   font-size: 5px;
@@ -193,35 +186,41 @@ body {
 }
 
 .swiper-slide img {
-  width: 80%;
-  height: 80%;
-  object-fit: cover;
+  width: calc(
+    200% - 80px
+  ); /* Ajusta a largura da imagem com o espaço ao redor da imagem */
+  height: calc(
+    100% - 40px
+  ); /* Ajusta a altura da imagem com o espaço ao redor da imagem */
+  max-width: 100%; /* Define a largura máxima igual à largura do contêiner */
+  max-height: 100%; /* Define a altura máxima igual à altura do contêiner */
+  object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
   border-radius: 10px;
 }
 
 /* Estilos para desktop */
 @media screen and (min-width: 768px) {
+  /* Remova a margem do media query para desktop */
   .swiper-container {
-    margin: 38px; /* Centraliza o contêiner */
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
-  }
-
-  .ultimo {
-    top: 38px;
   }
 }
 
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 767px) {
   .swiper-container {
-    /*margin-left: auto; /* Centraliza o contêiner */
-    /* margin-right: auto; /* Centraliza o contêiner */
     justify-content: center;
     align-items: center;
     display: flex;
+    transform: translateX(
+      -50%
+    ); /* Centraliza manualmente com base na largura */
+    margin: auto;
+    width: 100%;
+    left: 50%;
   }
 }
 
@@ -346,31 +345,6 @@ body {
 }
 
 /*GALERIA DE VIDEOS*/
-
-.video-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 800px;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.video-container {
-  display: flex;
-  position: relative;
-  width: calc(
-    50% - 20px
-  ); /* Ajustar para 50% da largura com espaço entre os vídeos */
-  max-width: 560px; /* Largura máxima do player de vídeo */
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgb(92, 91, 93);
-  border-radius: 20px;
-}
 
 @media (max-width: 768px) {
   .video-container {
@@ -951,7 +925,6 @@ button:hover {
   text-shadow: 0 0 10px #545454;
   color: #f8f6f6;
   font-family: cursive;
-  
 }
 .line {
   width: 80%;
