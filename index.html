@@ -41,6 +41,8 @@
       }
 
       .ricardo {
+        top: 10px;
+        margin: -20px;
         position: relative;
         border: none;
         border-radius: 20px;
@@ -50,6 +52,7 @@
         border: 2px solid green;
         -webkit-box-shadow: 5px 5px 37px 17px #fff;
         box-shadow: 5px 5px 37px 17px #fff;
+        transform: translateX(0); /* Centraliza manualmente com base na largura */
       }
 
       .home {
@@ -89,6 +92,7 @@
       #contato {
         text-align: center;
         border: 1px solid #000; /* Apenas para visualização, remova se não necessário */
+        border-radius: 20px;
       }
 
       /* Estilo da imagem .violao */
@@ -262,7 +266,7 @@
         </div>
 
         <br /><br />
-        <h1 style="text-align: center">RICARDO JÚNIOR</h1>
+        <h1 class="ricardo-h1" style="text-align: center">RICARDO JÚNIOR</h1>
         <br />
         <br /><br />
         <p class="home">
@@ -474,7 +478,7 @@
             <input type="radio" name="slider" id="item-1" checked />
             <input type="radio" name="slider" id="item-2" />
             <input type="radio" name="slider" id="item-3" />
-            <div class="cards">
+            <div class="cards distancia-cards">
               <label class="card" for="item-1" id="song-1">
                 <img src="./assets/igor1.jpeg" alt="" />
                 <button>Consultoria</button>
@@ -610,30 +614,31 @@
             <br />
           </form>
         </div>
+        <div id="social-links">
+          <a href="https://instagram.com/junior.amancio" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon
+          ></a>
+          <a href="https://youtube.com/amancio131079" target="_blank">
+            <ion-icon name="logo-youtube"></ion-icon
+          ></a>
+          <a
+            href="https://www.facebook.com/?locale=pt_BR"
+            title="Facebook"
+            target="_blank"
+          >
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://wa.me/5581996174799" target="_blank">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+        </div>
+        <br />
       </section>
       <a href="#" class="back-to-top" id="back-to-top">&#8679;</a>
     </main>
     <br /><br />
 
     <footer>
-      <div id="social-links">
-        <a href="https://instagram.com/junior.amancio" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon
-        ></a>
-        <a href="https://youtube.com/amancio131079" target="_blank">
-          <ion-icon name="logo-youtube"></ion-icon
-        ></a>
-        <a
-          href="https://www.facebook.com/?locale=pt_BR"
-          title="Facebook"
-          target="_blank"
-        >
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-        <a href="https://wa.me/5581996174799" target="_blank">
-          <ion-icon name="logo-whatsapp"></ion-icon>
-        </a>
-      </div>
       <p>
         &copy; 2024 Site criado por <br /><button class="a">
           <a
