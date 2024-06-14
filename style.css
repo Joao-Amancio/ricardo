@@ -891,7 +891,7 @@ button:hover {
   justify-content: space-evenly;
   flex-direction: column;
   padding: 0 2%;
-  width: 100%;
+  width: 80%;
   min-height: 800px;
 }
 
@@ -915,8 +915,8 @@ button:hover {
 }
 
 .text-titulo {
-  position: relative;
   top: -10px;
+  position: relative;
   z-index: 99;
   margin: 0 auto;
   text-align: center;
@@ -930,6 +930,11 @@ button:hover {
 
 #destaque {
   margin-top: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: block;
 }
 
 #destaque .titulo h2 {
@@ -937,7 +942,7 @@ button:hover {
 }
 
 #destaque .box {
-  width: 80%;
+  width: 100%;
   background: #fff;
 }
 
@@ -965,7 +970,6 @@ button:hover {
   width: 40%;
   height: 80%;
   top: -80px;
-
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -976,11 +980,13 @@ button:hover {
   transition: 0.4s ease;
   cursor: pointer;
 }
+
 #destaque .container .card img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
+
 #destaque .container .card button {
   position: absolute;
   bottom: 10px;
@@ -1022,6 +1028,21 @@ button:hover {
 /* #### Responsivo #### */
 
 @media screen and (max-width: 648px) {
+  .titulo {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+    left: 60px;
+  }
+
+  #destaque .container {
+    transform: translateX(
+      -10%
+    ); /* Centraliza manualmente com base na largura */
+  }
+
   #destaque .container .card {
     width: 360px;
     height: 360px;
