@@ -168,8 +168,8 @@ body {
   overflow: hidden;
   background-color: transparent;
   border: 1px solid white;
-  margin: 0 auto; /* Adicione a margem para centralizar em todas as larguras de tela */
-  transform: translateX(40%); /* Centraliza manualmente com base na largura */
+  margin: 0; /* Adicione a margem para centralizar em todas as larguras de tela */
+  transform: translateX(100%); /* Centraliza manualmente com base na largura */
 }
 
 .swiper-wrapper {
@@ -218,7 +218,7 @@ body {
     transform: translateX(
       -50%
     ); /* Centraliza manualmente com base na largura */
-    margin: auto;
+    margin: 0;
     width: 100%;
     left: 47%;
   }
@@ -550,7 +550,7 @@ textarea {
 #social-links {
   display: flex;
   justify-content: center;
-  font-size: 24px;
+  font-size: 40px;
 }
 
 #social-links a {
@@ -748,10 +748,10 @@ span {
     float: none; /* Remove o float aplicado no desktop */
     margin-left: 0; /* Reseta a margem esquerda aplicada no desktop */
     margin-right: 0; /* Adiciona margem direita 0 para uniformidade */
-    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    width: 80%; /* Garante que o contêiner ocupe toda a largura */
     padding: 0; /* Remove qualquer padding adicional */
     margin-top: -100px;
-    transform: translateX(6%); /* Centraliza manualmente com base na largura */
+    transform: translateX(8%); /* Centraliza manualmente com base na largura */
   }
 
   .ricardo img {
@@ -770,6 +770,9 @@ span {
     padding: 0;
   }
 
+  .ricardo-h1 {
+    text-shadow: rgb(0, 255, 76) 1px 0 10px;
+  }
   .down {
     justify-content: space-between;
     flex-direction: column;
@@ -924,7 +927,6 @@ button:hover {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  margin-top: 100px;
   text-shadow: 0 0 10px #545454;
   color: #f8f6f6;
   font-family: cursive;
@@ -952,7 +954,7 @@ button:hover {
 }
 
 #destaque {
-  margin-top: 250px;
+  margin-top: 300px;
 }
 
 #destaque .titulo h2 {
