@@ -746,13 +746,13 @@ span {
     align-items: center; /* Centraliza verticalmente se houver altura definida */
     text-align: center;
     float: none; /* Remove o float aplicado no desktop */
-    margin-left: 0; /* Reseta a margem esquerda aplicada no desktop */
+    margin-left: 10px; /* Reseta a margem esquerda aplicada no desktop */
     margin-right: 0; /* Adiciona margem direita 0 para uniformidade */
     width: 80%; /* Garante que o contêiner ocupe toda a largura */
     padding: 0; /* Remove qualquer padding adicional */
 
     transform: translateX(8%); /* Centraliza manualmente com base na largura */
-    margin-top: 0;
+    margin-top: -190px;
     margin-bottom: 0;
   }
 
@@ -768,12 +768,13 @@ span {
   .ricardo-h1 {
     display: block;
     text-align: center;
-    margin-top: -50px;
     padding: 0;
+    margin-top: -50px;
   }
 
   .ricardo-h1 {
     text-shadow: rgb(0, 255, 76) 1px 0 10px;
+    margin-top: -150px;
   }
   .down {
     justify-content: space-between;
