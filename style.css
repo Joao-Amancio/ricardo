@@ -15,12 +15,6 @@ body {
   overflow-x: hidden; /* Evita o scroll horizontal */
 }
 
-main {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden; /* Evita o scroll horizontal */
-}
 
 .header {
   background-color: green;
