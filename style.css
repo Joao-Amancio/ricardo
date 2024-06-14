@@ -1092,3 +1092,12 @@ button:hover {
     margin-bottom: 120px;
   }
 }
+
+@media screen and (max-width: 648px) {
+  .input-group {
+    padding: 0px;
+    margin: 0;
+    width: 400px;
+    
+  }
+}
