@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden; /* Evita o scroll horizontal */
 }
 
 body {
@@ -11,6 +12,13 @@ body {
   color: white;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; /* Evita o scroll horizontal */
+}
+
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden; /* Evita o scroll horizontal */
 }
 
