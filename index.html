@@ -33,42 +33,35 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <style>
-
-      .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ajusta a altura conforme necessário */
-    gap: 20px; /* ajuste a quantidade de espaço entre as imagens */
-}
-
-.ricardo {
-    width: 300px;
-    height: 500px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 0; /* remover espaço entre as imagens no modo mobile */
-    }
-
-    .ricardo {
-        display: none;
-    }
-
-    #rico {
-        display: block;
-    }
-}
-
       .container {
         display: flex;
-        align-items: center;
         justify-content: center;
-        height: 100vh; /* Ajusta de acordo com a altura desejada */
+        align-items: center;
+        height: 100vh; /* ajusta a altura conforme necessário */
+        gap: 20px; /* ajuste a quantidade de espaço entre as imagens no desktop */
       }
 
+      .ricardo {
+        width: 300px;
+        height: 500px;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          gap: 0; /* remover espaço entre as imagens no modo mobile */
+          height: auto; /* permite que o container se ajuste ao conteúdo */
+          padding-top: 20px; /* ajuste conforme necessário para um pequeno espaçamento */
+        }
+
+        .ricardo {
+          display: none;
+        }
+
+        #rico {
+          display: block;
+        }
+      }
 
       .ricardo-h1 {
         text-shadow: rgb(0, 255, 76) 1px 0 10px;
@@ -216,21 +209,20 @@
         border: 2px solid black;
         border-radius: 20px;
       }
-      
+
       @media (max-width: 1024px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 150%;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    align-items: center;
-  }
-}
-     
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+          width: 150%;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          justify-content: center;
+          align-items: center;
+        }
+      }
     </style>
   </head>
   <body>
@@ -279,10 +271,15 @@
         <div class="bday"><p style="font-weight: bold; text-align: center; font-size: 20px;">Que bom ter você por aqui!</p></div>  -->
 
         <div class="container">
-          <img src="./assets/ricardo.jpeg" alt="Ricardo" class="ricardo" /> &nbsp;
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+          <img src="./assets/ricardo.jpeg" alt="Ricardo" class="ricardo" />
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
-          <img id="rico" src="./assets/reflita3.jpeg" alt="Rico" class="ricardo" />
+          <img
+            id="rico"
+            src="./assets/reflita3.jpeg"
+            alt="Rico"
+            class="ricardo"
+          />
           &nbsp;
         </div>
 
@@ -640,7 +637,8 @@
           <a href="https://instagram.com/junior.amancio" target="_blank">
             <ion-icon name="logo-instagram"></ion-icon
           ></a>
-          <a href="https://www.facebook.com/?locale=pt_BR"
+          <a
+            href="https://www.facebook.com/?locale=pt_BR"
             title="Facebook"
             target="_blank"
           >
