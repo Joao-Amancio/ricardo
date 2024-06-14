@@ -1042,18 +1042,16 @@ button:hover {
     text-align: center;
     justify-content: flex-start;
     align-items: center;
-    left: 50px;
+    left: 35px;
   }
 
   #destaque .container {
-    transform: translateX(
-      -10%
-    ); /* Centraliza manualmente com base na largura */
+    transform: translateX(-8%); /* Centraliza manualmente com base na largura */
   }
 
   #destaque .container .card {
-    width: 360px;
-    height: 360px;
+    width: 340px;
+    height: 340px;
     top: -20px;
   }
 
@@ -1098,6 +1096,5 @@ button:hover {
     padding: 0px;
     margin: 0;
     width: 400px;
-    
   }
 }
