@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -14,7 +13,6 @@ body {
   margin: 0;
   overflow-x: hidden; /* Evita o scroll horizontal */
 }
-
 
 .header {
   background-color: green;
@@ -752,8 +750,10 @@ span {
     margin-right: 0; /* Adiciona margem direita 0 para uniformidade */
     width: 80%; /* Garante que o contêiner ocupe toda a largura */
     padding: 0; /* Remove qualquer padding adicional */
-    margin-top: -100px;
+
     transform: translateX(8%); /* Centraliza manualmente com base na largura */
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .ricardo img {
