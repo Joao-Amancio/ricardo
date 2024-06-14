@@ -739,8 +739,7 @@ span {
 }
 
 /* RESPONSIVO */
-  @media (max-width: 768px) {  
-
+@media (max-width: 768px) {
   .home,
   .ricardo-h1 {
     display: block;
@@ -824,10 +823,6 @@ span {
     align-items: center;
     text-align: center;
   }   */
-
-  #rico {
-    display: none;
-  }
 
   .swiper-container {
     margin: 10px;
@@ -934,7 +929,7 @@ button:hover {
 }
 
 #destaque {
-  margin-top: 300px;
+  margin-top: 0;
 }
 
 #destaque .titulo h2 {
@@ -1021,15 +1016,15 @@ button:hover {
 }
 
 #videos {
-  margin-top: 120px;
+  margin-top: 0;
 }
 
 /* #### Responsivo #### */
 
 @media screen and (max-width: 648px) {
   #destaque .container .card {
-    width: 100%;
-    height: auto;
+    width: 360px;
+    height: 360px;
     top: -20px;
   }
 
