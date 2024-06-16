@@ -523,6 +523,7 @@ section.visible {
   transform: translateY(0);
 }
 
+/*
 .float {
   width: 50%;
   float: left;
@@ -534,7 +535,8 @@ section.visible {
     width: 100%;
     padding: 0;
   }
-}
+} */
+
 
 /* BIOGRAFIA DESKTOP */
 
