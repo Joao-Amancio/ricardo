@@ -585,6 +585,21 @@
     <a href="https://api.whatsapp.com/send?phone=5581988335498" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+
+     <script>
+    document.addEventListener('scroll', function() {
+      const whatsappButton = document.getElementById('whatsappButton');
+      const header = document.querySelector('.header');
+      const headerHeight = header.offsetHeight;
+
+      if (window.scrollY < headerHeight) {
+        whatsappButton.classList.add('hidden');
+      } else {
+        whatsappButton.classList.remove('hidden');
+      }
+    });
+  </script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
