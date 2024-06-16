@@ -624,7 +624,7 @@ span {
     display: block;
     text-align: center;
     padding: 0;
-    margin-top: -20px;
+    margin-top: 0;
     margin-bottom: 100px;
     z-index: 1;
     margin-bottom: 0;
@@ -634,7 +634,7 @@ span {
     display: block;
     text-align: center;
     text-shadow: rgb(0, 255, 76) 1px 0 10px;
-    margin-top: -20px;
+    margin-top: 0;
   }
   .down {
     justify-content: space-between;
