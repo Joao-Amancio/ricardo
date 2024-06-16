@@ -581,25 +581,30 @@
         Todos os direitos reservados.
       </p>
     </footer>
-     <div class="whatsapp-button">
-    <a href="https://api.whatsapp.com/send?phone=5581988335498" target="_blank">
+     <div class="whatsapp-button" id="whatsappButton">
+    <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+  </div>
+  </a>
+ 
+   <script>
+    var whatsappButton = document.querySelector('.whatsapp-button');
+    var bodyHeight = document.body.scrollHeight;
+    var hidePercentage = 50; // Porcentagem do corpo onde o botão do WhatsApp deve desaparecer
 
-     <script>
-    document.addEventListener('scroll', function() {
-      const whatsappButton = document.getElementById('whatsappButton');
-      const header = document.querySelector('.header');
-      const headerHeight = header.offsetHeight;
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      var scrollPercentage = (scrollPosition / bodyHeight) * 100;
 
-      if (window.scrollY < headerHeight) {
-        whatsappButton.classList.add('hidden');
-      } else {
+      if (scrollPercentage >= hidePercentage) {
         whatsappButton.classList.remove('hidden');
+      } else {
+        whatsappButton.classList.add('hidden');
       }
     });
   </script>
-
+     
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
