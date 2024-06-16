@@ -110,7 +110,6 @@ body {
   height: auto;
 }
 
-
 /* carrossel 2*/
 
 #resultados {
@@ -331,8 +330,6 @@ body {
   text-align: center;
 }
 
-
-
 /* Estilos adicionais para desktop */
 @media only screen and (min-width: 601px) {
   .nav {
@@ -402,9 +399,7 @@ footer {
     margin-top: 20px; /* Adicionar espaço antes dos títulos */
     margin-bottom: 10px; /* Adicionar espaço após os títulos */
   }
-  
 }
-
 
 /* Adicionando regras de estilo para dispositivos móveis */
 @media only screen and (max-width: 600px) {
@@ -537,7 +532,6 @@ section.visible {
   }
 } */
 
-
 /* BIOGRAFIA DESKTOP */
 
 .container1 {
@@ -630,7 +624,7 @@ span {
     display: block;
     text-align: center;
     padding: 0;
-    margin-top: -50px;
+    margin-top: -20px;
     margin-bottom: 100px;
     z-index: 1;
     margin-bottom: 0;
@@ -640,7 +634,7 @@ span {
     display: block;
     text-align: center;
     text-shadow: rgb(0, 255, 76) 1px 0 10px;
-    margin-top: -50px;
+    margin-top: -20px;
   }
   .down {
     justify-content: space-between;
@@ -668,6 +662,4 @@ span {
   #biografia .right img {
     width: 60%;
   }
-
 }
-
