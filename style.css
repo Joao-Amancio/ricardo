@@ -137,8 +137,9 @@ body {
   overflow: hidden;
   background-color: transparent;
   border: 1px solid white;
-  margin: 0; /* Adicione a margem para centralizar em todas as larguras de tela */
-  transform: translateX(100%); /* Centraliza manualmente com base na largura */
+  margin: 20px; /* Adicione a margem para centralizar em todas as larguras de tela */
+  transform: translateX(140%); /* Centraliza manualmente com base na largura */
+ 
 }
 
 .swiper-wrapper {
@@ -173,8 +174,8 @@ body {
   .swiper-container {
     justify-content: center;
     align-items: center;
-    text-align: center;
-    display: flex;
+    text-align: center;  
+    
   }
 }
 
@@ -185,11 +186,12 @@ body {
     align-items: center;
     display: flex;
     transform: translateX(
-      -50%
+      -53%
     ); /* Centraliza manualmente com base na largura */
     margin: 0;
     width: 100%;
     left: 47%;
+    margin: 20px;
   }
 }
 
@@ -455,28 +457,6 @@ footer {
   background: #474b4f;
 }
 
-summary {
-  display: list-item;
-  cursor: pointer;
-  list-style: none;
-  padding: 5px;
-}
-
-summary {
-  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
-  outline: none; /* Remove o contorno de foco */
-}
-
-/* Estilo geral para remover a seta no Android e em outros navegadores */
-summary {
-  list-style: none; /* Remove a seta */
-}
-
-/* Estilo específico para Safari no iOS */
-summary::-webkit-details-marker {
-  display: none; /* Remove a seta no Safari */
-}
-
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -561,8 +541,13 @@ section.visible {
   transition: 0.5s ease;
 }
 
-#biografia {
-  margin-top: 0;
+.bio {
+  top: -120px;
+  margin-bottom: -100px;
+}
+
+.saiba-mais {
+  display: none;
 }
 
 #biografia .container1 {
@@ -577,7 +562,8 @@ section.visible {
 #biografia .box {
   box-shadow: 0 5px 20px #2b2b2b;
   background: transparent;
-  margin-bottom: 120px;
+  margin-bottom: 50px;
+  top: -500px;
 }
 
 #biografia .box .text {
@@ -641,6 +627,17 @@ span {
     width: 100%;
   }
 
+  .saiba-mais {
+    display: block;
+    background: white;
+    color: rgb(59, 82, 63);
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 40%;
+    width: 150px;
+    padding: 10px;
+  }
+
   #biografia {
     margin-top: -50px;
   }
@@ -656,6 +653,28 @@ span {
 
   #biografia .right img {
     width: 60%;
+  }
+
+  summary {
+    display: list-item;
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+  }
+
+  summary {
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
+  }
+
+  /* Estilo geral para remover a seta no Android e em outros navegadores */
+  summary {
+    list-style: none; /* Remove a seta */
+  }
+
+  /* Estilo específico para Safari no iOS */
+  summary::-webkit-details-marker {
+    display: none; /* Remove a seta no Safari */
   }
 }
 
