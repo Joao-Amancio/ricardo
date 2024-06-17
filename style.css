@@ -113,7 +113,6 @@ body {
 /* carrossel 2*/
 
 #resultados {
-  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -614,10 +613,6 @@ span {
   font-style: italic;
 }
 
-#resultados {
-  margin-top: -130px;
-}
-
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .home {
@@ -723,12 +718,12 @@ span {
 @media (max-width: 767px) {
   .instagram-button {
     bottom: 126px;
-    right: 22px;
+    right: 23px;
   }
 
   .instagram-button img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
   }
 }
 
