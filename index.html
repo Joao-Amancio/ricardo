@@ -581,10 +581,17 @@
         Todos os direitos reservados.
       </p>
     </footer>
-     <div class="whatsapp-button" id="whatsappButton">
-    <a href="https://api.whatsapp.com/send?phone=5511999999999" target="_blank">
+     <div class="whatsapp-button hidden" id="whatsappButton">
+    <a href="https://api.whatsapp.com/send?phone=5581988335498" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
+
+    <div class="instagram-button hidden" id="instagramButton">
+    <a href="https://www.instagram.com/ricardojuniornutri" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+  </div>
+    
   </div>
   </a>
  
@@ -601,6 +608,23 @@
         whatsappButton.classList.remove('hidden');
       } else {
         whatsappButton.classList.add('hidden');
+      }
+    });
+  </script>
+
+  <script>
+    var instagramButton = document.getElementById('instagramButton');
+    var bodyHeight = document.body.scrollHeight;
+    var hidePercentage = 50; // Porcentagem do corpo onde o botão do Instagram deve desaparecer
+
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      var scrollPercentage = (scrollPosition / bodyHeight) * 100;
+
+      if (scrollPosition === 0 || scrollPercentage >= hidePercentage) {
+        instagramButton.classList.add('hidden');
+      } else {
+        instagramButton.classList.remove('hidden');
       }
     });
   </script>

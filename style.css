@@ -62,7 +62,7 @@ body {
 .bday {
   top: 5px;
   font-size: 0.8em;
-  color: #868686;
+  color: white;
   letter-spacing: 2px;
   transition: 1s;
 }
@@ -664,6 +664,8 @@ span {
   }
 }
 
+/* Zap FIXO */
+
 .whatsapp-button {
   position: fixed;
   bottom: 70px;
@@ -684,6 +686,11 @@ span {
   visibility: hidden;
 }
 
+.whatsapp-button.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* Estilos para dispositivos móveis */
 @media (max-width: 767px) {
   .whatsapp-button {
@@ -695,4 +702,37 @@ span {
     width: 50px;
     height: 50px;
   }
+}
+
+/* INSTAGRAM FIXO */
+
+.instagram-button {
+  position: fixed;
+  bottom: 126px;
+  right: 22px;
+  z-index: 1000;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.instagram-button img {
+  width: 45px;
+  height: 45px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+  .instagram-button {
+    bottom: 126px;
+    right: 22px;
+  }
+
+  .instagram-button img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.instagram-button img {
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
