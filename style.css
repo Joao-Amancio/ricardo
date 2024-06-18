@@ -746,8 +746,8 @@ summary::-webkit-details-marker {
   width: 250%; /* Ajuste conforme necessário */
   height: 80%;
   top: 30px;
-  left: -120px;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
+  left: -100px;
+  transform: translateX(0); /* Centraliza horizontalmente */
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
