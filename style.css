@@ -121,31 +121,29 @@ body {
 /* Estilo do contêiner pai dos contêineres Swiper */
 .swiper-parent {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: space-between; /* Espaço igual entre os itens */
   align-items: center; /* Centraliza verticalmente */
+  overflow: hidden; /* Esconde qualquer overflow */
+  padding: 20px; /* Adiciona padding para dar espaçamento */
+  flex-wrap: wrap; /* Permite quebra de linha para múltiplos itens */
 }
 
+/* Estilo do contêiner Swiper */
 .swiper-container {
   position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: calc(
-    100% - 10px
-  ); /* Ajusta a largura do contêiner com o espaço ao redor da imagem */
-  max-width: calc(
-    400px - 60px
-  ); /* Define a largura máxima com o espaço ao redor da imagem */
-  min-width: calc(
-    300px - 60px
-  ); /* Define a largura mínima com o espaço ao redor da imagem */
+  width: 22%; /* Ajusta a largura para garantir quatro itens na linha */
+  max-width: 340px; /* Define a largura máxima */
   height: 395px; /* Altura fixa para o contêiner */
   box-shadow: 4px 4px 4px 4px rgba(255, 254, 254, 0.2);
   border-radius: 10px;
   overflow: hidden;
   background-color: transparent;
   border: 1px solid white;
-  margin: 20px; /* Adicione a margem para centralizar em todas as larguras de tela */
+  margin: 10px; /* Margem para criar espaçamento entre os contêineres */
   flex-wrap: wrap;
 }
 
@@ -163,12 +161,8 @@ body {
 }
 
 .swiper-slide img {
-  width: calc(
-    200% - 80px
-  ); /* Ajusta a largura da imagem com o espaço ao redor da imagem */
-  height: calc(
-    100% - 40px
-  ); /* Ajusta a altura da imagem com o espaço ao redor da imagem */
+  width: 100%;
+  height: 100%;
   max-width: 100%; /* Define a largura máxima igual à largura do contêiner */
   max-height: 100%; /* Define a altura máxima igual à altura do contêiner */
   object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
@@ -177,11 +171,12 @@ body {
 
 /* Estilos para desktop */
 @media screen and (min-width: 768px) {
-  /* Remova a margem do media query para desktop */
+  .swiper-parent {
+    justify-content: space-between; /* Espaço igual entre os itens */
+  }
   .swiper-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    margin: 10px; /* Margem para criar espaçamento entre os contêineres */
+    width: 22%; /* Ajusta a largura para garantir quatro itens na linha */
   }
 }
 
@@ -189,21 +184,18 @@ body {
 @media screen and (max-width: 767px) {
   .swiper-parent {
     display: block;
+    padding: 10px; /* Adiciona padding para dar espaçamento */
   }
 
   .swiper-container {
     justify-content: center;
     align-items: center;
     display: flex;
-    transform: translateX(
-      -53%
-    ); /* Centraliza manualmente com base na largura */
-    margin: 0;
-    width: 100%;
-    left: 47%;
-    margin: 20px;
+    margin: 20px auto; /* Centraliza com margem automática */
+    width: calc(100% - 40px); /* Ajusta a largura para ser responsiva */
   }
 }
+
 
 .logo {
   display: flex;
