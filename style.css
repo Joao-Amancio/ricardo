@@ -118,12 +118,20 @@ body {
   text-align: center;
 }
 
+/* Estilo do contêiner pai dos contêineres Swiper */
+.swiper-parent {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
 .swiper-container {
   position: relative;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: calc(
-    100% - 60px
+    100% - 10px
   ); /* Ajusta a largura do contêiner com o espaço ao redor da imagem */
   max-width: calc(
     400px - 60px
@@ -138,8 +146,7 @@ body {
   background-color: transparent;
   border: 1px solid white;
   margin: 20px; /* Adicione a margem para centralizar em todas as larguras de tela */
-  transform: translateX(140%); /* Centraliza manualmente com base na largura */
- 
+  flex-wrap: wrap;
 }
 
 .swiper-wrapper {
@@ -174,13 +181,16 @@ body {
   .swiper-container {
     justify-content: center;
     align-items: center;
-    text-align: center;  
-    
+    text-align: center;
   }
 }
 
 /* Estilos para dispositivos móveis */
 @media screen and (max-width: 767px) {
+  .swiper-parent {
+    display: block;
+  }
+
   .swiper-container {
     justify-content: center;
     align-items: center;
@@ -519,23 +529,24 @@ section.visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 95vh;
+  min-height: 100vh;
 }
 
 .down {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
+  width: 150%;
   min-height: 300px;
 }
 
 .box {
-  width: 60%;
+  width: 50%;
   min-height: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
   padding: 0 2%;
   transition: 0.5s ease;
@@ -547,7 +558,15 @@ section.visible {
 }
 
 .saiba-mais {
-  display: none;
+  display: block;
+  background: white;
+  color: rgb(59, 82, 63);
+  font-weight: bold;
+  border-radius: 10px;
+  margin-left: 40%;
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
 }
 
 #biografia .container1 {
@@ -599,6 +618,21 @@ span {
   font-style: italic;
 }
 
+summary {
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
+}
+
+/* Estilo geral para remover a seta no Android e em outros navegadores */
+summary {
+  list-style: none; /* Remove a seta */
+}
+
+/* Estilo específico para Safari no iOS */
+summary::-webkit-details-marker {
+  display: none; /* Remove a seta no Safari */
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .home {
@@ -621,6 +655,9 @@ span {
     justify-content: space-between;
     flex-direction: column;
     min-height: 600px;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   .box {
@@ -654,7 +691,9 @@ span {
   #biografia .right img {
     width: 60%;
   }
+}
 
+@media (max-width: 768px) {
   summary {
     display: list-item;
     cursor: pointer;
@@ -749,4 +788,95 @@ span {
 .instagram-button img {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
   outline: none; /* Remove o contorno de foco */
+}
+
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultoria {
+  min-width: 300px;
+  min-height: 60px;
+  display: inline-flex;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.consultoria::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.consultoria:hover, 
+.consultoria:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.consultoria:hover::before, 
+.consultoria:focus::before {
+  opacity: 1;
+}
+
+.consultoria::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.consultoria:hover::after, 
+.consultoria:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
