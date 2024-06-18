@@ -23,6 +23,15 @@ body {
   align-items: center;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Para garantir que os itens flexíveis se ajustem à nova linha */
+}
+
+.item {
+  flex: 1 1 auto; /* Permite que os itens cresçam e encolham conforme necessário */
+}
+
 .happy {
   position: relative;
   font-family: cursive;
@@ -708,6 +717,11 @@ summary::-webkit-details-marker {
   }
 }
 
+a {
+  color: green;
+  font-weight: bold;
+}
+
 #destaque .titulo h2 {
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -743,8 +757,8 @@ summary::-webkit-details-marker {
 
 #destaque .container1 .card {
   position: absolute;
-  width: 250%; /* Ajuste conforme necessário */
-  height: 80%;
+  width: 170%; /* Ajuste conforme necessário */
+  height: 65%;
   top: 30px;
   left: -100px;
   transform: translateX(0); /* Centraliza horizontalmente */
@@ -756,24 +770,9 @@ summary::-webkit-details-marker {
   transition: 0.4s ease;
   cursor: pointer;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/*
-#destaque .container1 .card {
-  position: absolute;
-  width: 250%;
-  height: 80%;
-  top: 30px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  box-shadow: 0 0 10px 0 #848790;
-  transition: 0.4s ease;
-  cursor: pointer;
-} */
 #destaque .container1 .card img {
   width: 100%;
   height: 100%;
@@ -817,10 +816,10 @@ summary::-webkit-details-marker {
 @media screen and (max-width: 648px) {
   #destaque .container1 .card {
     position: absolute;
-    width: 240%; /* Ajuste conforme necessário */
-    height: 80%;
+    width: 140%; /* Ajuste conforme necessário */
+    height: 75%;
     top: 30px;
-    left: -100px;
+    left: -50px;
     transform: translateX(-0%); /* Centraliza horizontalmente */
     margin: 0 auto;
     display: block;
@@ -829,6 +828,17 @@ summary::-webkit-details-marker {
     box-shadow: 0 0 10px 0 #848790;
     transition: 0.4s ease;
     cursor: pointer;
+    z-index: 1000;
+  }
+
+  #destaque .container1 .card button {
+    display: block; /* Garante que o botão esteja visível no mobile */
+    width: 100px; /* Ajuste conforme necessário */
+    height: 40px; /* Ajuste conforme necessário */
+    bottom: 20px; /* Ajuste conforme necessário */
+    left: 25%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background: white;
   }
 
   #item-1:checked ~ .cards #song-3,
@@ -846,6 +856,49 @@ summary::-webkit-details-marker {
     opacity: 0.4;
     z-index: 0;
   }
+}
+
+.animated-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  animation: buttonAnimation 1s infinite alternate;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .animated-button {
+    font-size: 0.875em; /* Ajusta o tamanho do botão em telas menores */
+    padding: 0.5em 3em; /* Ajusta o padding em telas menores */
+    min-width: 15em; /* Ajusta a largura mínima em telas menores */
+  }
+}
+
+button a {
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
+}
+
+a {
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
+}
+
+a {
+  text-decoration: none; /* Remove a linha/traço */
 }
 
 /* Zap FIXO */
