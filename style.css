@@ -817,10 +817,10 @@ summary::-webkit-details-marker {
 @media screen and (max-width: 648px) {
   #destaque .container1 .card {
     position: absolute;
-    width: 250%; /* Ajuste conforme necessário */
+    width: 240%; /* Ajuste conforme necessário */
     height: 80%;
     top: 30px;
-    left: -110px;
+    left: -100px;
     transform: translateX(-0%); /* Centraliza horizontalmente */
     margin: 0 auto;
     display: block;
