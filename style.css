@@ -869,7 +869,7 @@ a {
   }
 }
 
-button a input{
+button a {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
   outline: none; /* Remove o contorno de foco */
   z-index: 1;
