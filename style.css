@@ -735,8 +735,8 @@ a {
 
 #destaque .container1 .card {
   position: absolute;
-  width: 170%; /* Ajuste conforme necessário */
-  height: 65%;
+  width: 130%; /* Ajuste conforme necessário */
+  height: 75%;
   top: 30px;
   left: -100px;
   transform: translateX(0); /* Centraliza horizontalmente */
@@ -847,7 +847,6 @@ a {
 
 .animated-button:hover {
   background: #d9f1ec;
-  
 }
 
 @keyframes buttonAnimation {
@@ -875,9 +874,8 @@ a {
     border-radius: 20px;
     background-color: #fff;
     animation: buttonAnimation 1s infinite alternate;
-    min-width: 12em;
+    min-width: 11em;
   }
-  
 }
 
 button a {
