@@ -1136,8 +1136,9 @@ a {
   color: #f8f6f6;
   font-weight: bold;
   font-family: "open_sansregular";
-  letter-spacing: 26px;
+  letter-spacing: 10px;
   transition: 6s;
+  margin-top: -10px;
 }
 @keyframes motion {
   0% {
