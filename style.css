@@ -507,20 +507,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/*
-.float {
-  width: 50%;
-  float: left;
-  padding-right: 15px;
-}
-
-@media (max-width: 500px) {
-  .float {
-    width: 100%;
-    padding: 0;
-  }
-} */
-
 /* BIOGRAFIA DESKTOP */
 
 .container1 {
@@ -700,6 +686,10 @@ a {
   font-weight: bold;
 }
 
+.img {
+  border: 5px solid white;
+}
+
 #destaque .titulo h2 {
   font-family: "Montserrat Alternates", sans-serif;
 }
@@ -738,7 +728,7 @@ a {
   width: 130%; /* Ajuste conforme necessário */
   height: 75%;
   top: 30px;
-  left: -100px;
+  left: -42px;
   transform: translateX(0); /* Centraliza horizontalmente */
   margin: 0 auto;
   display: flex;
@@ -749,6 +739,7 @@ a {
   cursor: pointer;
   overflow: hidden;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 #destaque .container1 .card img {
@@ -881,6 +872,7 @@ a {
 button a {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
   outline: none; /* Remove o contorno de foco */
+  z-index: 1;
 }
 
 a {
@@ -972,7 +964,7 @@ a {
   justify-content: center;
 }
 
-.consultoria {
+.consultoria2 {
   min-width: 300px;
   min-height: 60px;
   display: inline-flex;
@@ -1001,7 +993,7 @@ a {
   padding: 10px;
 }
 
-.consultoria::before {
+.consultoria2::before {
   content: "";
   border-radius: 1000px;
   min-width: calc(300px + 12px);
@@ -1016,18 +1008,18 @@ a {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.consultoria:hover,
-.consultoria:focus {
+.consultoria2:hover,
+.consultoria2:focus {
   color: #313133;
   transform: translateY(-6px);
 }
 
-.consultoria:hover::before,
-.consultoria:focus::before {
+.consultoria2:hover::before,
+.consultoria2:focus::before {
   opacity: 1;
 }
 
-.consultoria::after {
+.consultoria2::after {
   content: "";
   width: 30px;
   height: 30px;
@@ -1041,8 +1033,8 @@ a {
   animation: ring 1.5s infinite;
 }
 
-.consultoria:hover::after,
-.consultoria:focus::after {
+.consultoria2:hover::after,
+.consultoria2:focus::after {
   animation: none;
   display: none;
 }
@@ -1066,7 +1058,7 @@ a {
   position: relative;
   width: 150px;
   height: 75px;
-  background-color: #000508;
+  background-color: white;
   border-radius: 30px;
   display: flex;
   padding: 10px;
@@ -1077,6 +1069,7 @@ a {
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
+  box-shadow: rgb(0, 255, 76) 1px 0 10px;
 }
 .saiba-mais::before {
   content: "";
@@ -1090,7 +1083,7 @@ a {
 .saiba-mais::after {
   content: "";
   position: absolute;
-  background-color: #000508;
+  background-color: rgb(59, 82, 63);
   inset: 5px;
   border-radius: inherit;
   z-index: -1;
