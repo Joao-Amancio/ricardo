@@ -282,8 +282,43 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 })
 
-
 /////////////////////////////////////
 
+ let currentIndex = 0
+ let interval
 
-        
+ function startCarousel() {
+   interval = setInterval(showNextImage, 3000)
+ }
+
+ function showNextImage() {
+   const imagesContainer = document.querySelector(".carousel-images")
+   const totalImages = document.querySelectorAll(".carousel-images img").length
+   currentIndex = (currentIndex + 1) % totalImages
+   imagesContainer.style.transform = `translateX(-${
+     (currentIndex * 100) / totalImages
+   }%)`
+ }
+
+ function pauseCarousel() {
+   clearInterval(interval)
+ }
+
+ function resumeCarousel() {
+   startCarousel()
+ }
+
+ document
+   .querySelector(".carousel")
+   .addEventListener("mouseenter", pauseCarousel)
+ document
+   .querySelector(".carousel")
+   .addEventListener("mouseleave", resumeCarousel)
+ document
+   .querySelector(".carousel")
+   .addEventListener("touchstart", pauseCarousel)
+ document
+   .querySelector(".carousel")
+   .addEventListener("touchend", resumeCarousel)
+
+ startCarousel()
