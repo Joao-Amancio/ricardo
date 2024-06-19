@@ -856,7 +856,7 @@ input {
   outline: none; /* Remove o contorno de foco */
 }
 
-.card {
+.card .cards {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
   outline: none; /* Remove o contorno de foco */
 }
