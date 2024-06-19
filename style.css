@@ -557,18 +557,6 @@ section.visible {
   margin-bottom: -100px;
 }
 
-.saiba-mais {
-  display: block;
-  background: white;
-  color: rgb(59, 82, 63);
-  font-weight: bold;
-  border-radius: 10px;
-  margin-left: 40%;
-  width: 150px;
-  padding: 10px;
-  cursor: pointer;
-}
-
 #biografia .container1 {
   flex-direction: column;
   align-items: flex-start;
@@ -650,6 +638,7 @@ summary::-webkit-details-marker {
     text-align: center;
     text-shadow: rgb(0, 255, 76) 1px 0 10px;
     margin-top: 0;
+    font-size: 30px;
   }
   .down {
     justify-content: space-between;
@@ -662,17 +651,6 @@ summary::-webkit-details-marker {
 
   .box {
     width: 100%;
-  }
-
-  .saiba-mais {
-    display: block;
-    background: white;
-    color: rgb(59, 82, 63);
-    font-weight: bold;
-    border-radius: 10px;
-    margin-left: 40%;
-    width: 150px;
-    padding: 10px;
   }
 
   #biografia {
@@ -816,10 +794,10 @@ a {
 @media screen and (max-width: 648px) {
   #destaque .container1 .card {
     position: absolute;
-    width: 140%; /* Ajuste conforme necessário */
+    width: 130%; /* Ajuste conforme necessário */
     height: 75%;
     top: 30px;
-    left: -50px;
+    left: -42px;
     transform: translateX(-0%); /* Centraliza horizontalmente */
     margin: 0 auto;
     display: block;
@@ -867,6 +845,11 @@ a {
   animation: buttonAnimation 1s infinite alternate;
 }
 
+.animated-button:hover {
+  background: #d9f1ec;
+  
+}
+
 @keyframes buttonAnimation {
   0% {
     transform: scale(1);
@@ -880,11 +863,21 @@ a {
 
 /* Estilos responsivos */
 @media (max-width: 600px) {
-  .animated-button {
+  /* .animated-button {
     font-size: 0.875em; /* Ajusta o tamanho do botão em telas menores */
-    padding: 0.5em 3em; /* Ajusta o padding em telas menores */
-    min-width: 15em; /* Ajusta a largura mínima em telas menores */
+  /*  padding: 0.5em 3em; /* Ajusta o padding em telas menores */
+  /*  min-width: 15em; /* Ajusta a largura mínima em telas menores */
+  /*  } */
+  .animated-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    animation: buttonAnimation 1s infinite alternate;
+    min-width: 12em;
   }
+  
 }
 
 button a {
@@ -1066,5 +1059,55 @@ a {
     width: 300px;
     height: 300px;
     opacity: 0;
+  }
+}
+
+/*   */
+
+.saiba-mais {
+  position: relative;
+  width: 150px;
+  height: 75px;
+  background-color: #000508;
+  border-radius: 30px;
+  display: flex;
+  padding: 10px;
+  font-weight: bold;
+  margin-left: 40%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.saiba-mais::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 200%;
+  background: linear-gradient(180deg, #07e2f1, #eb9b05);
+  animation: animate 3s linear infinite;
+  z-index: -1;
+}
+.saiba-mais::after {
+  content: "";
+  position: absolute;
+  background-color: #000508;
+  inset: 5px;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.saiba-mais {
+  z-index: 1; /* Coloque o texto no topo */
+  color: white; /* Garanta que o texto é visível */
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
