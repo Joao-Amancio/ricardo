@@ -1222,13 +1222,13 @@ a {
     color: #000000;
     margin-bottom: -42px;
   }
-  30% {
+  0% {
     letter-spacing: 30px;
     margin-bottom: -42px;
   }
-  85% {
-    letter-spacing: 5px;
-    margin-bottom: -42px;
+  35% {
+    letter-spacing: 3px;
+    margin-bottom: -38px;
   }
 }
 
@@ -1317,8 +1317,8 @@ a {
 /* Estilo para celular */
 @media (max-width: 767px) {
   .carousel {
-    width: 88%;
-    height: 33vh; /* Maior altura do que largura */
+    width: 98%;
+    height: 36vh; /* Maior altura do que largura */
     justify-content: center;
     align-items: center;
     margin: 0 auto;
