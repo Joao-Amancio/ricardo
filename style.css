@@ -128,6 +128,7 @@ body {
 }
 
 /* Estilo do contêiner pai dos contêineres Swiper */
+
 .swiper-parent {
   display: flex;
   justify-content: space-between; /* Espaço igual entre os itens */
@@ -135,6 +136,9 @@ body {
   overflow: hidden; /* Esconde qualquer overflow */
   padding: 20px; /* Adiciona padding para dar espaçamento */
   flex-wrap: wrap; /* Permite quebra de linha para múltiplos itens */
+
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 /* Estilo do contêiner Swiper */
@@ -154,10 +158,16 @@ body {
   border: 1px solid white;
   margin: 10px; /* Margem para criar espaçamento entre os contêineres */
   flex-wrap: wrap;
+
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .swiper-wrapper {
   display: flex;
+
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .swiper-slide {
@@ -167,6 +177,9 @@ body {
   font-size: 5px;
   color: #fff;
   height: 100%; /* Ajusta a altura para preencher o contêiner */
+
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .swiper-slide img {
@@ -176,6 +189,9 @@ body {
   max-height: 100%; /* Define a altura máxima igual à altura do contêiner */
   object-fit: cover; /* Mantém a proporção da imagem e preenche o espaço */
   border-radius: 10px;
+
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 /* Estilos para desktop */
@@ -1214,7 +1230,7 @@ a {
 .carousel-videos {
   display: flex;
   height: 100%;
-  transition: transform 2s ease;
+  transition: transform 1s ease;
 }
 
 .carousel-videos video {
@@ -1261,8 +1277,12 @@ a {
 /* Estilo para celular */
 @media (max-width: 767px) {
   .carousel {
-    width: 100%;
-    height: 37vh; /* Maior altura do que largura */
+    width: 88%;
+    height: 33vh; /* Maior altura do que largura */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
   }
 
   .carousel-videos {

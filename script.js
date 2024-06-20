@@ -323,118 +323,130 @@ document.addEventListener("DOMContentLoaded", function () {
 
  startCarousel()  */
 
-  let currentIndex = 0
-  let interval
-  let startX = 0
-  let isDragging = false
+ let currentIndex = 0
+ let interval
+ let startX = 0
+ let isDragging = false
 
-  function startCarousel() {
-    interval = setInterval(showNextVideo, 5000) // Change to 5 seconds
-  }
+ // Inicia o carrossel
+ function startCarousel() {
+   interval = setInterval(showNextVideo, 5000) // Muda o slide a cada 5 segundos
+ }
 
-  function showNextVideo() {
-    const videosContainer = document.querySelector(".carousel-videos")
-    const totalVideos = document.querySelectorAll(
-      ".carousel-videos video"
-    ).length
+ // Mostra o próximo vídeo
+ function showNextVideo() {
+   const videosContainer = document.querySelector(".carousel-videos")
+   const totalVideos = document.querySelectorAll(
+     ".carousel-videos video"
+   ).length
 
-    const currentVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    currentVideo.pause() // Pauses the current video
+   const currentVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   currentVideo.pause() // Pausa o vídeo atual
 
-    currentIndex = (currentIndex + 1) % totalVideos
+   currentIndex = (currentIndex + 1) % totalVideos
 
-    const nextVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    nextVideo.currentTime = 0 // Resets the next video to start
-    nextVideo.play() // Plays the next video
+   const nextVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   nextVideo.currentTime = 0 // Reinicia o próximo vídeo
+   nextVideo.play() // Reproduz o próximo vídeo
 
-    videosContainer.style.transform = `translateX(-${
-      (currentIndex * 100) / totalVideos
-    }%)`
-  }
+   videosContainer.style.transform = `translateX(-${
+     (currentIndex * 100) / totalVideos
+   }%)`
+ }
 
-  function pauseCarousel() {
-    clearInterval(interval)
-    const currentVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    currentVideo.pause() // Pauses the current video
-  }
+ // Pausa o carrossel
+ function pauseCarousel() {
+   clearInterval(interval)
+   const currentVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   currentVideo.pause() // Pausa o vídeo atual
+ }
 
-  function resumeCarousel() {
-    const currentVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    currentVideo.play() // Plays the current video
-    startCarousel()
-  }
+ // Retoma o carrossel
+ function resumeCarousel() {
+   const currentVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   currentVideo.play() // Reproduz o vídeo atual
+   startCarousel()
+ }
 
-  function handleTouchStart(event) {
-    startX = event.touches[0].clientX
-    isDragging = true
-    pauseCarousel()
-  }
+ // Inicia a manipulação do toque
+ function handleTouchStart(event) {
+   startX = event.touches[0].clientX
+   isDragging = true
+   pauseCarousel()
+ }
 
-  function handleTouchMove(event) {
-    if (!isDragging) return
-    const currentX = event.touches[0].clientX
-    const diffX = startX - currentX
+ // Manipula o movimento do toque
+ function handleTouchMove(event) {
+   if (!isDragging) return
+   const currentX = event.touches[0].clientX
+   const diffX = startX - currentX
 
-    if (diffX > 50) {
-      showNextVideo()
-      isDragging = false
-    } else if (diffX < -50) {
-      showPreviousVideo()
-      isDragging = false
-    }
-  }
+   if (diffX > 50) {
+     showNextVideo()
+     isDragging = false
+   } else if (diffX < -50) {
+     showPreviousVideo()
+     isDragging = false
+   }
+ }
 
-  function handleTouchEnd() {
-    isDragging = false
-    resumeCarousel()
-  }
+ // Finaliza a manipulação do toque
+ function handleTouchEnd() {
+   isDragging = false
+   resumeCarousel()
+ }
 
-  function showPreviousVideo() {
-    const videosContainer = document.querySelector(".carousel-videos")
-    const totalVideos = document.querySelectorAll(
-      ".carousel-videos video"
-    ).length
+ // Mostra o vídeo anterior
+ function showPreviousVideo() {
+   const videosContainer = document.querySelector(".carousel-videos")
+   const totalVideos = document.querySelectorAll(
+     ".carousel-videos video"
+   ).length
 
-    const currentVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    currentVideo.pause() // Pauses the current video
+   const currentVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   currentVideo.pause() // Pausa o vídeo atual
 
-    currentIndex = (currentIndex - 1 + totalVideos) % totalVideos
+   currentIndex = (currentIndex - 1 + totalVideos) % totalVideos
 
-    const previousVideo = document.querySelectorAll(".carousel-videos video")[
-      currentIndex
-    ]
-    previousVideo.currentTime = 0 // Resets the previous video to start
-    previousVideo.play() // Plays the previous video
+   const previousVideo = document.querySelectorAll(".carousel-videos video")[
+     currentIndex
+   ]
+   previousVideo.currentTime = 0 // Reinicia o vídeo anterior
+   previousVideo.play() // Reproduz o vídeo anterior
 
-    videosContainer.style.transform = `translateX(-${
-      (currentIndex * 100) / totalVideos
-    }%)`
-  }
+   videosContainer.style.transform = `translateX(-${
+     (currentIndex * 100) / totalVideos
+   }%)`
+ }
 
-  document
-    .querySelector(".carousel")
-    .addEventListener("mouseenter", pauseCarousel)
-  document
-    .querySelector(".carousel")
-    .addEventListener("mouseleave", resumeCarousel)
-  document
-    .querySelector(".carousel")
-    .addEventListener("touchstart", handleTouchStart)
-  document
-    .querySelector(".carousel")
-    .addEventListener("touchmove", handleTouchMove)
-  document
-    .querySelector(".carousel")
-    .addEventListener("touchend", handleTouchEnd)
+ // Adiciona event listeners para pausa e retoma o carrossel
+ document
+   .querySelector(".carousel")
+   .addEventListener("mouseenter", pauseCarousel)
+ document
+   .querySelector(".carousel")
+   .addEventListener("mouseleave", resumeCarousel)
+ document
+   .querySelector(".carousel")
+   .addEventListener("touchstart", handleTouchStart)
+ document
+   .querySelector(".carousel")
+   .addEventListener("touchmove", handleTouchMove)
+ document
+   .querySelector(".carousel")
+   .addEventListener("touchend", handleTouchEnd)
 
-  startCarousel()
+ // Inicia o carrossel ao carregar a página
+ window.onload = function () {
+   startCarousel()
+ }
