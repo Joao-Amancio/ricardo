@@ -323,7 +323,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
  startCarousel()  */
 
-
   let currentIndex = 0
   let interval
   let startX = 0

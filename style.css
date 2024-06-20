@@ -1207,20 +1207,18 @@ a {
 
 .carousel {
   width: 100%;
-  height: 37vh;
   overflow: hidden;
   position: relative;
 }
 
 .carousel-videos {
   display: flex;
-  width: 300%; /* 100% * number of videos */
   height: 100%;
   transition: transform 2s ease;
 }
 
 .carousel-videos video {
-  width: 33.3333%; /* Width of one video, 100% / number of videos */
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -1239,4 +1237,39 @@ a {
 
 .carousel video::-o-media-controls {
   display: none !important;
+}
+
+/* Estilo para desktop */
+@media (min-width: 768px) {
+  .carousel {
+    width: 55%; /* Ajuste a largura desejada */
+    height: 30vw; /* Altura igual à largura */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .carousel-videos {
+    width: 300%; /* 100% * number of videos */
+  }
+
+  .carousel-videos video {
+    width: 33.3333%; /* Width of one video, 100% / number of videos */
+  }
+}
+
+/* Estilo para celular */
+@media (max-width: 767px) {
+  .carousel {
+    width: 100%;
+    height: 37vh; /* Maior altura do que largura */
+  }
+
+  .carousel-videos {
+    width: 300%; /* 100% * number of videos */
+  }
+
+  .carousel-videos video {
+    width: 33.3333%; /* Width of one video, 100% / number of videos */
+  }
 }
