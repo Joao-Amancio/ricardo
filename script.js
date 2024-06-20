@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 /////////////////////////////////////
-
+/*
  let currentIndex = 0
  let interval
 
@@ -321,4 +321,114 @@ document.addEventListener("DOMContentLoaded", function () {
    .querySelector(".carousel")
    .addEventListener("touchend", resumeCarousel)
 
- startCarousel()
+ startCarousel()  */
+
+let currentIndex = 0
+let interval
+let startX = 0
+let isDragging = false
+
+function startCarousel() {
+  interval = setInterval(showNextVideo, 8000)
+}
+
+function showNextVideo() {
+  const videosContainer = document.querySelector(".carousel-videos")
+  const totalVideos = document.querySelectorAll(".carousel-videos video").length
+
+  const currentVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  currentVideo.pause() // Pauses the current video
+
+  currentIndex = (currentIndex + 1) % totalVideos
+
+  const nextVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  nextVideo.currentTime = 0 // Resets the next video to start
+  nextVideo.play() // Plays the next video
+
+  videosContainer.style.transform = `translateX(-${
+    (currentIndex * 100) / totalVideos
+  }%)`
+}
+
+function pauseCarousel() {
+  clearInterval(interval)
+  const currentVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  currentVideo.pause() // Pauses the current video
+}
+
+function resumeCarousel() {
+  const currentVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  currentVideo.play() // Plays the current video
+  startCarousel()
+}
+
+function handleTouchStart(event) {
+  startX = event.touches[0].clientX
+  isDragging = true
+  pauseCarousel()
+}
+
+function handleTouchMove(event) {
+  if (!isDragging) return
+  const currentX = event.touches[0].clientX
+  const diffX = startX - currentX
+
+  if (diffX > 50) {
+    showNextVideo()
+    isDragging = false
+  } else if (diffX < -50) {
+    showPreviousVideo()
+    isDragging = false
+  }
+}
+
+function handleTouchEnd() {
+  isDragging = false
+  resumeCarousel()
+}
+
+function showPreviousVideo() {
+  const videosContainer = document.querySelector(".carousel-videos")
+  const totalVideos = document.querySelectorAll(".carousel-videos video").length
+
+  const currentVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  currentVideo.pause() // Pauses the current video
+
+  currentIndex = (currentIndex - 1 + totalVideos) % totalVideos
+
+  const previousVideo = document.querySelectorAll(".carousel-videos video")[
+    currentIndex
+  ]
+  previousVideo.currentTime = 0 // Resets the previous video to start
+  previousVideo.play() // Plays the previous video
+
+  videosContainer.style.transform = `translateX(-${
+    (currentIndex * 100) / totalVideos
+  }%)`
+}
+
+document
+  .querySelector(".carousel")
+  .addEventListener("mouseenter", pauseCarousel)
+document
+  .querySelector(".carousel")
+  .addEventListener("mouseleave", resumeCarousel)
+document
+  .querySelector(".carousel")
+  .addEventListener("touchstart", handleTouchStart)
+document
+  .querySelector(".carousel")
+  .addEventListener("touchmove", handleTouchMove)
+document.querySelector(".carousel").addEventListener("touchend", handleTouchEnd)
+
+startCarousel()
