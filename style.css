@@ -1210,14 +1210,13 @@ a {
   height: 37vh;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
 }
 
 .carousel-videos {
   display: flex;
   width: 300%; /* 100% * number of videos */
   height: 100%;
-  transition: transform 1s ease;
+  transition: transform 2s ease;
 }
 
 .carousel-videos video {
