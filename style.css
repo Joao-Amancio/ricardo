@@ -4,14 +4,17 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: Arial, sans-serif;
   background: rgb(59, 82, 63);
-  box-sizing: border-box;
   color: white;
-  padding: 0;
-  margin: 0;
   overflow-x: hidden; /* Evita o scroll horizontal */
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .header {
@@ -1273,7 +1276,7 @@ a {
 .carousel-videos video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .carousel video::-webkit-media-controls {
@@ -1315,10 +1318,11 @@ a {
 @media (max-width: 767px) {
   .carousel {
     width: 100%;
-    height: 37vh; /* Altura maior que a largura para formato retangular */
+    height: 30vh; /* Altura maior que a largura para formato retangular */
     border: 2px solid rgb(16, 167, 81);
     box-shadow: rgb(0, 255, 76) 1px 0 10px;
     margin: 0 auto;
+    background: url(./assets/reflita3.jpeg);
   }
 
   .carousel-videos {
@@ -1326,8 +1330,8 @@ a {
   }
 
   .carousel-videos video {
-    width: 44.4444%; /* Width of one video, 100% / number of videos */
+    width: 33.3333%; /* Width of one video, 100% / number of videos */
     height: 100%;
-    object-fit: cover; /* Garantir que o vídeo se ajuste ao contêiner */
+    object-fit: contain; /* Garantir que o vídeo se ajuste ao contêiner */
   }
 }
