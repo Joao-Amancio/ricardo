@@ -124,10 +124,11 @@ body {
 
 /* carrossel 2*/
 
-#resultados {
+#resultados h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: -30px;
 }
 
 /* Estilo do contêiner pai dos contêineres Swiper */
@@ -1219,7 +1220,7 @@ a {
   font-family: "open_sansregular";
   letter-spacing: 3px;
   transition: 6s;
-  margin-top: 5px;
+  margin-top: 30px;
 }
 @keyframes motion {
   0% {
@@ -1265,21 +1266,18 @@ a {
   width: 100%;
   overflow: hidden;
   position: relative;
-  
 }
 
 .carousel-videos {
   display: flex;
   height: 100%;
   transition: transform 2s ease;
-  
 }
 
 .carousel-videos video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  
 }
 
 .carousel video::-webkit-media-controls {
@@ -1334,5 +1332,135 @@ a {
     width: 33.3333%; /* Width of one video, 100% / number of videos */
     height: 100%;
     object-fit: contain; /* Garantir que o vídeo se ajuste ao contêiner */
+  }
+}
+
+/*  */
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1200px; /* Defina um máximo para centralizar no desktop */
+}
+
+.carousel2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  height: 220px; /* Altura fixa para o carrossel */
+  margin: 0 20px 0 0; /* Margem direita para espaçamento */
+  border-radius: 20px;
+}
+
+.carousel2-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%; /* Garante que as imagens preencham a altura do carrossel */
+}
+
+.carousel2-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover; /* Garante que a imagem cubra a área disponível sem distorção */
+  height: 100%; /* Garante que as imagens preencham a altura do carrossel */
+}
+
+.consultoria-text {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  flex-basis: 200px; /* Espaço reservado para o texto */
+  margin: 0 auto; /* Centraliza o texto verticalmente e horizontalmente */
+  padding: 0; /* Remove padding para evitar espaços extras */
+  animation: pulse 2s infinite; /* Animação de pulsar */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container {
+    flex-direction: column; /* Muda a direção para coluna no celular */
+    align-items: center;
+  }
+
+  .carousel2 {
+    max-width: 100%;
+    height: 150px; /* Ajuste a altura para telas menores */
+    margin: 0; /* Remove margem */
+    margin-top: -120px;
+  }
+
+  .consultoria-text {
+    font-size: 24px;
+    margin: 0; /* Remove margem */
+    padding-bottom: 10px; /* Adiciona um pequeno espaçamento abaixo do texto */
+    order: -1; /* Move o texto para cima do carrossel */
+  }
+}
+
+/* */
+
+.carousel4-container {
+  position: relative;
+  width: 150%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.carousel4 {
+  display: flex;
+  animation: scroll 10s linear infinite;
+  width: calc(200% + 1px); /* Ajustado para evitar margem branca */
+  white-space: nowrap;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.carousel4 div {
+  min-width: 100%;
+  text-align: center;
+  font-size: 2em;
+  padding: 2rem;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel4 {
+    width: calc(200% + 1px);
+    margin-bottom: -5px;
+  }
+  .carousel4 div {
+    min-width: 100%;
+    padding: 2rem;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }

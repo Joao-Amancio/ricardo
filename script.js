@@ -455,3 +455,60 @@ window.onload = function () {
   autoPlayVideos()
   startCarousel()
 }
+
+
+/////////////////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function () {
+  const carouselImages = document.querySelector(".carousel2-images")
+  const images = document.querySelectorAll(".carousel2-images img")
+  const totalImages = images.length
+  let index = 0
+
+  function showNextImage() {
+    index++
+    if (index >= totalImages) {
+      index = 0
+    }
+    updateCarousel()
+  }
+
+  function showPreviousImage() {
+    index--
+    if (index < 0) {
+      index = totalImages - 1
+    }
+    updateCarousel()
+  }
+
+  function updateCarousel() {
+    const offset = -index * 100
+    carouselImages.style.transform = `translateX(${offset}%)`
+  }
+
+  // Optional: Automatic sliding
+  setInterval(showNextImage, 3000) // Change image every 3 seconds
+
+  // Optional: Add navigation buttons
+  /*
+  const nextButton = document.createElement("button")
+  nextButton.innerHTML = "Next"
+  nextButton.style.position = "absolute"
+  nextButton.style.top = "50%"
+  nextButton.style.right = "10px"
+  nextButton.style.transform = "translateY(-50%)"
+  nextButton.addEventListener("click", showNextImage)
+
+  const prevButton = document.createElement("button")
+  prevButton.innerHTML = "Previous"
+  prevButton.style.position = "absolute"
+  prevButton.style.top = "50%"
+  prevButton.style.left = "10px"
+  prevButton.style.transform = "translateY(-50%)"
+  prevButton.addEventListener("click", showPreviousImage)
+
+  document.querySelector(".carousel2").appendChild(nextButton)
+  document.querySelector(".carousel2").appendChild(prevButton) */
+})
+
+
