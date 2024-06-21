@@ -1326,7 +1326,7 @@ a {
   }
 
   .carousel-videos video {
-    width: 33.3333%; /* Width of one video, 100% / number of videos */
+    width: 44.4444%; /* Width of one video, 100% / number of videos */
     height: 100%;
     object-fit: cover; /* Garantir que o vídeo se ajuste ao contêiner */
   }
