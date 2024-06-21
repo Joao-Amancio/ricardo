@@ -330,7 +330,7 @@ let isDragging = false
 
 // Função para iniciar o carrossel
 function startCarousel() {
-  interval = setInterval(showNextVideo, 5000) // Muda o slide a cada 5 segundos
+  interval = setInterval(showNextVideo, 8000) // Muda o slide a cada 5 segundos
 }
 
 // Função para mostrar o próximo vídeo
