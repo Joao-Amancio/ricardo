@@ -1429,7 +1429,8 @@ a {
   animation: scroll 10s linear infinite;
   width: calc(200% + 1px); /* Ajustado para evitar margem branca */
   white-space: nowrap;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 2px 5px rgb(5, 94, 44);
 }
 .carousel4 div {
   min-width: 100%;
