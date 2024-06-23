@@ -722,7 +722,7 @@ a {
   text-align: center;
 }
 .content {
-  padding: 20px 50px 160px 50px;
+  padding: 20px 50px 50px 50px;
   background-color: #1c1c1c;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -732,12 +732,27 @@ a {
   box-shadow: 1px 0 10px rgb(0, 255, 76);
   margin-bottom: 200px;
 }
-.bday p {
+
+.happy4 {
+  background: green;
+  border: 2px solid white;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+}
+
+.bday4 {
   font-size: 20px;
   text-shadow: 1px 0 10px rgb(0, 255, 76);
   position: absolute;
-  margin-top: -200px;
-  left: 25px;
+  margin-top: -180px;
+  left: 130px;
+}
+
+.bday4-1 {
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 35px;
+  text-shadow: 0 0 10px white;
 }
 .cards {
   display: flex;
@@ -746,6 +761,8 @@ a {
   flex-direction: column;
   position: relative;
   height: 300px; /* Adicionando altura fixa */
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 .card {
   width: 100%;
@@ -754,14 +771,20 @@ a {
   transition: transform 0.5s, opacity 0.5s;
   cursor: pointer;
   position: absolute;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 .card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 input[type="radio"] {
   display: none;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 #item-1:checked ~ .cards #song-1,
 #item-2:checked ~ .cards #song-2,
@@ -769,6 +792,8 @@ input[type="radio"] {
   transform: translateY(0%) scale(1);
   opacity: 1;
   z-index: 2;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 #item-1:checked ~ .cards #song-2,
 #item-2:checked ~ .cards #song-3,
@@ -776,6 +801,8 @@ input[type="radio"] {
   transform: translateY(100%) scale(0.8);
   opacity: 0.4;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 #item-1:checked ~ .cards #song-3,
 #item-2:checked ~ .cards #song-1,
@@ -783,16 +810,29 @@ input[type="radio"] {
   transform: translateY(-100%) scale(0.8);
   opacity: 0.4;
   z-index: 1;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 @media (min-width: 768px) {
+  .bday4 {
+    font-size: 30px;
+    text-shadow: 1px 0 10px rgb(0, 255, 76);
+    position: absolute;
+    left: 470px;
+    margin-top: -150px;
+  }
   .cards {
     flex-direction: row;
     height: 300px;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   .card {
     width: 30%;
     margin: 0 10px;
     position: static;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-1:checked ~ .cards #song-1,
   #item-2:checked ~ .cards #song-2,
@@ -800,6 +840,8 @@ input[type="radio"] {
     transform: translateX(0%) scale(1);
     opacity: 1;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-1:checked ~ .cards #song-2,
   #item-2:checked ~ .cards #song-3,
@@ -807,6 +849,8 @@ input[type="radio"] {
     transform: translateX(120%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-1:checked ~ .cards #song-3,
   #item-2:checked ~ .cards #song-1,
@@ -814,63 +858,106 @@ input[type="radio"] {
     transform: translateX(-120%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
 }
 @media (max-width: 767px) {
+  .bday4-1 {
+    text-align: center;
+    margin-top: 135px;
+    font-size: 25px;
+    margin-bottom: -35px;
+  }
+
   .cards {
     flex-direction: column;
     height: 300px;
+    width: 100%;
+    margin-top: 250px;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   .card {
     width: 80%;
     margin: 0 auto;
     position: absolute;
     transition: transform 0.5s, opacity 0.5s;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
+
+  .card img {
+    width: 100%;
+
+    height: auto;
+    border-radius: 8px;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
+  }
+
   #item-1:checked ~ .cards #song-1 {
     transform: translateY(0%) scale(1);
     opacity: 1;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-1:checked ~ .cards #song-2 {
     transform: translateY(100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-1:checked ~ .cards #song-3 {
     transform: translateY(-100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-2:checked ~ .cards #song-1 {
     transform: translateY(-100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-2:checked ~ .cards #song-2 {
     transform: translateY(0%) scale(1);
     opacity: 1;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-2:checked ~ .cards #song-3 {
     transform: translateY(100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-3:checked ~ .cards #song-1 {
     transform: translateY(100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-3:checked ~ .cards #song-2 {
     transform: translateY(-100%) scale(0.8);
     opacity: 0.4;
     z-index: 1;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
   #item-3:checked ~ .cards #song-3 {
     transform: translateY(0%) scale(1);
     opacity: 1;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+    outline: none; /* Remove o contorno de foco */
   }
 }
 
@@ -899,26 +986,65 @@ input {
   outline: none; /* Remove o contorno de foco */
 }
 
-/* Estilos responsivos */
-/*@media (max-width: 600px) {
-  /* .animated-button {
-    font-size: 0.875em; /* Ajusta o tamanho do botão em telas menores */
-/*  padding: 0.5em 3em; /* Ajusta o padding em telas menores */
-/*  min-width: 15em; /* Ajusta a largura mínima em telas menores */
-/*  } */
-/* .animated-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 2px solid #ccc;
-    border-radius: 20px;
-    background-color: #fff;
-    animation: buttonAnimation 1s infinite alternate;
-    min-width: 11em;
+.container {
+  text-align: center;
+}
 
-    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
-/* outline: none; /* Remove o contorno de foco */
-/*  }
-} */
+.animated-button {
+  background: linear-gradient(45deg, #4caf50, #81c784);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 100px;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animated-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animated-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 1.5s infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .animated-button {
+    padding: 12px 24px;
+    font-size: 15px;
+    margin-top: 180px;
+  }
+}
 
 button a {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
@@ -1320,7 +1446,7 @@ a {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 800px;
+  max-width: 820px;
   height: 220px; /* Altura fixa para o carrossel */
   margin: 0 20px 0 0; /* Margem direita para espaçamento */
   border-radius: 20px;
