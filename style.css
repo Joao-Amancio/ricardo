@@ -737,7 +737,7 @@ a {
 }
 .content {
   padding: 20px 50px 50px 50px;
-  background-color: #1c1c1c;
+  background-color: #1c1c1c8a;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
