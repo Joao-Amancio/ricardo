@@ -577,6 +577,10 @@ section.visible {
   margin-bottom: -100px;
 }
 
+#biografia {
+  margin-top: -50px;
+}
+
 #biografia .container1 {
   flex-direction: column;
   align-items: flex-start;
@@ -1521,5 +1525,57 @@ a {
     100% {
       transform: translateX(-100%);
     }
+  }
+}
+
+
+/* Estilo para o contêiner onde o texto será digitado */
+.typing-container {
+  border: 1px solid rgb(6, 76, 24); /* Borda sólida verde-azulado */
+  padding: 10px; /* Espaçamento interno de 10 pixels */
+  margin: auto; /* Centraliza o contêiner horizontalmente */
+  border-radius: 20px; /* Borda arredondada com raio de 20 pixels */
+  font-weight: bold; /* Texto em negrito */
+  text-align: left; /* Alinha o texto à esquerda */
+  width: 80%; /* Largura do contêiner é 80% do espaço disponível */
+  max-width: 3000px; /* Largura máxima do contêiner é 3000 pixels */
+  box-sizing: border-box; /* A largura definida inclui padding e border */
+  white-space: pre-wrap; /* Preserva espaços em branco e permite que o texto quebre em várias linhas */
+}
+
+/* Estilo para o texto que está sendo digitado */
+.typing-text {
+  display: inline-block; /* Torna o elemento um bloco inline */
+  overflow: hidden; /* Qualquer conteúdo que exceda o tamanho definido é ocultado */
+  border-right: 4px solid; /* Borda direita inicialmente invisível */
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  animation: typing 8s steps(100, end) forwards, blink-caret 0.75s step-end 8; /* Animação de digitação e cursor piscando */
+}
+
+/* Animação para simular o texto sendo digitado */
+@keyframes typing {
+  from {
+    width: 0; /* Começa com largura zero */
+  }
+  to {
+    width: 100%; /* Termina com largura total, simulando texto completamente digitado */
+  }
+}
+
+/* Animação para o cursor piscar */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Cor do cursor transparente no início e no fim */
+  }
+  50% {
+    border-color: black; /* Cor do cursor preta no meio da animação, simulando o piscar */
+  }
+}
+
+/* Estilo responsivo para telas menores que 600px */
+@media screen and (max-width: 600px) {
+  .typing-container {
+    width: 90%; /* Reduz a largura do contêiner para 90% em telas menores */
   }
 }
