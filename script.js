@@ -388,7 +388,6 @@ window.onload = function () {
   startCarousel()
 }
 
-
 /////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -443,14 +442,16 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".carousel2").appendChild(prevButton) */
 })
 
+/////////////////////////////////////
 
- function moveBackward(current) {
-            const totalItems = 3;
-            let nextItem = current - 1;
-            if (nextItem < 1) {
-                nextItem = totalItems;
-            }
-            document.getElementById('item-' + nextItem).checked = true;
-          }
-
-
+function moveBackward(current, slider) {
+  let next
+  if (current === 1) {
+    next = 3
+  } else if (current === 2) {
+    next = 1
+  } else if (current === 3) {
+    next = 2
+  }
+  document.getElementById(slider + "-item-" + next).checked = true
+}

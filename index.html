@@ -203,7 +203,8 @@
     <div class="carousel4">
         <div>FAZER DIETA NÃO É MODA, É UM ESTILO DE VIDA!</div>
         <div>FAZER DIETA NÃO É MODA, É UM ESTILO DE VIDA!</div>
-    </div>
+        
+    </div>  
 </div>
     </div>
     <main id="main-content">
@@ -211,7 +212,7 @@
       <br />
 
       <br />
-      <section id="home" class="fade-in w50">
+      <section id="home" class="fade-in W50">
         <!--   <div class="happy"><h1 style="text-align: center; font-size: 80px;">Home</h1></div>
         <div class="bday"><p style="font-weight: bold; text-align: center; font-size: 20px;">Que bom ter você por aqui!</p></div>  -->
 
@@ -259,18 +260,11 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
       <section
         id="biografia"
         class="fade-in bass w50"
-        style="background: rgb(59, 82, 63);">
+        >
         <div class="titulo">
         <div class="happy">
           <br /><br />
-          <h1 class="bio" 
-            style="
-              text-align: center;
-              position: relative;
-              background: rgb(59, 82, 63);
-              ;
-            "
-          >
+          <h1 class="bio">
             Biografia
           </h1>
         </div>
@@ -459,46 +453,43 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
                         <p style="text-shadow: rgb(0, 255, 76)"><br>Você Também Pode!</p>
                     </div>
                 </div>
-                
-                    <input type="radio" name="slider" id="item-1" checked>
-                    <input type="radio" name="slider" id="item-2">
-                    <input type="radio" name="slider" id="item-3">
-                    <div class="cards">
-                        <label class="card" id="song-1" onclick="moveBackward(1)">
-                            <img src="./assets/igor1.jpeg" alt="Promoção 1">
-                        </label>
+                      <!-- Primeiro Slider -->
+  <input type="radio" name="slider1" id="slider1-item-1" checked>
+  <input type="radio" name="slider1" id="slider1-item-2">
+  <input type="radio" name="slider1" id="slider1-item-3">
+  <div class="cards">
+    <label class="card" id="slider1-song-1" onclick="moveBackward(1, 'slider1')">
+      <img src="./assets/igor1.jpeg" alt="Promoção 1">
+    </label>
+    <label class="card" id="slider1-song-2" onclick="moveBackward(2, 'slider1')">
+      <img src="./assets/igor2.jpeg" alt="Promoção 2">
+    </label>
+    <label class="card" id="slider1-song-3" onclick="moveBackward(3, 'slider1')">
+      <img src="./assets/igor3.jpeg" alt="Promoção 3">
+    </label>
+  </div>
 
-                        <label class="card" id="song-2" onclick="moveBackward(2)">
-                            <img src="./assets/igor2.jpeg" alt="Promoção 2">
-                        </label>
+  <br><br>
+  <p class="bday4-1">Click em qualquer imagem em destaque</p>
 
-                        <label class="card" id="song-3" onclick="moveBackward(3)">
-                            <img src="./assets/igor3.jpeg" alt="Promoção 3">
-                        </label>
-                    </div>
-                    <br>
-                    <br>
-                    <p class="bday4-1">Click em qualquer imagem em destaque</p>
+  <!-- Segundo Slider -->
+  <input type="radio" name="slider2" id="slider2-item-1" checked>
+  <input type="radio" name="slider2" id="slider2-item-2">
+  <input type="radio" name="slider2" id="slider2-item-3">
+  <div class="cards">
+    <label class="card" id="slider2-song-1" onclick="moveBackward(1, 'slider2')">
+      <img src="./assets/glaci1.jpeg" alt="Promoção 1">
+    </label>
+    <label class="card" id="slider2-song-2" onclick="moveBackward(2, 'slider2')">
+      <img src="./assets/glaci2.jpeg" alt="Promoção 2">
+    </label>
+    <label class="card" id="slider2-song-3" onclick="moveBackward(3, 'slider2')">
+      <img src="./assets/glaci3.jpeg" alt="Promoção 3">
+    </label>
+  </div>
                     
-                    
-                    <input type="radio" name="slider" id="item-1" checked>
-                    <input type="radio" name="slider" id="item-2">
-                    <input type="radio" name="slider" id="item-3">
-                    <div class="cards">
-                        <label class="card" id="song-1" onclick="moveBackward(1)">
-                            <img src="./assets/glaci1.jpeg" alt="Promoção 1">
-                        </label>
-
-                        <label class="card" id="song-2" onclick="moveBackward(2)">
-                            <img src="./assets/glaci2.jpeg" alt="Promoção 2">
-                        </label>
-
-                        <label class="card" id="song-3" onclick="moveBackward(3)">
-                            <img src="./assets/glaci3.jpeg" alt="Promoção 3">
-                        </label>                        
-                    </div>
                      <div class="containerbutton">
-        <button class="animated-button">CONSULTORIA - CLICK AQUI</button>
+        <button class="animated-button">CONSULTORIA <br> CLICK AQUI</button>
     </div>
                 </div>
             </div>
