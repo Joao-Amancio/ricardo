@@ -911,8 +911,7 @@ input[type="radio"] {
   }
 }
 @media (max-width: 767px) {
-  .bday4 {
-    left: 60px;
+  .bday4 {    
     font-size: 25px;
   }
 

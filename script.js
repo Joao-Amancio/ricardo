@@ -455,3 +455,6 @@ function moveBackward(current, slider) {
   }
   document.getElementById(slider + "-item-" + next).checked = true
 }
+
+
+/////////////////////
