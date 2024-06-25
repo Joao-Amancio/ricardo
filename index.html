@@ -237,11 +237,10 @@
         <br />
         <br /><br />
         <details class="home">
-        <p class="home">
-          <summary>
-          &nbsp; &nbsp;  <div class="typing-container">
-        <span class="typing-text">Oi, tudo bem? Me chamo Ricardo Júnior e é um prazer ter você por aqui! Se você veio até mim, não foi em vão. Posso te ajudar da melhor forma e garanto te trazer resultados satisfatórios!</span>
-    </div>
+        <summary>&nbsp; &nbsp;  
+        <div class="typing-container" id="typing-container">
+            <span id="typing-text"></span>
+        </div>
     </div>
     </div><p class="consultoria-text" style="border: 3px solid rgb(6, 76, 24); padding: 10px; margin: 5% 30% 5% 30%; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 18px;">SAIBA MAIS</p> </summary>
 Por que você deveria me escolher? Então, já fui paciente como você e tinha uma meta em ter resultados,  procurei um nutricionista para me ajudar e, no final de tudo, ele só me entregou uma dieta e me deixou sozinho; aquilo veio me frustar, pois não tive nenhuma assistência. Foi então que resolvi entrar na faculdade de Nutrição e de Educação Física; estudei, me formei, e agora vim trazer uma forma inovadora para você! 
@@ -507,7 +506,7 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
         class="fade-in w50 videos"
         id="videos"
         style="
-          background-color: rgb(1, 21, 6);
+          border: 2px solid rgb(130, 126, 126);
           border-radius: 50px;">
         <br />
         <h1 style="text-align: center; font-size: 30px">Meus Vídeos</h1>
@@ -603,8 +602,8 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
     <footer>
       <p>
         &copy; 2024 Site criado por <br /><button class="a">
-          <a
-            style="color: rgb(94, 154, 200); font-weight: bold"
+          <a class="amancio"
+            style="color: rgb(94, 154, 200); font-weight: bold;"
             href="https://wa.me/5581996174799"
             >Amancio JR.</a
           >
@@ -711,6 +710,34 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
           })
         })
       })
+    </script>
+    
+    <script>
+        const text = "Oi, tudo bem? Me chamo Ricardo Júnior e é um prazer ter você por aqui! Se você veio até mim, não foi em vão. Posso te ajudar da melhor forma e garanto te trazer resultados satisfatórios!";
+        let index = 0;
+        const speed = 50; // Velocidade da digitação em milissegundos
+
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeText, speed);
+            }
+        }
+
+        // Função para iniciar a digitação quando o elemento estiver visível
+        function startTyping(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    typeText();
+                    observer.disconnect(); // Para observar apenas uma vez
+                }
+            });
+        }
+
+        // Configuração do Intersection Observer
+        const observer = new IntersectionObserver(startTyping, { threshold: 1.0 });
+        observer.observe(document.getElementById('typing-container'));
     </script>
   </body>
 </html>
