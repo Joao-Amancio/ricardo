@@ -496,7 +496,7 @@ footer {
 }
 
 #social-links a:hover {
-  background: #474b4f;
+  background: rgba(38, 91, 47, 0.338);
 }
 
 .back-to-top {
@@ -911,7 +911,7 @@ input[type="radio"] {
   }
 }
 @media (max-width: 767px) {
-  .bday4 {    
+  .bday4 {
     font-size: 25px;
   }
 
@@ -1006,6 +1006,8 @@ input {
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .animated-button:hover {
@@ -1043,6 +1045,8 @@ input {
     font-size: 20px;
     width: 100%;
     margin-top: 180px;
+    -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
   }
 }
 
@@ -1050,6 +1054,11 @@ button a {
   -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
   outline: none; /* Remove o contorno de foco */
   z-index: 1;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 a {
@@ -1168,6 +1177,8 @@ a {
   outline: none;
   position: relative;
   padding: 10px;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul em dispositivos Android */
+  outline: none; /* Remove o contorno de foco */
 }
 
 .consultoria2::before {
@@ -1425,6 +1436,7 @@ a {
   height: 220px; /* Altura fixa para o carrossel */
   margin: 0 20px 0 0; /* Margem direita para espaçamento */
   border-radius: 20px;
+  
 }
 
 .carousel2-images {

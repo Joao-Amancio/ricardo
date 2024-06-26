@@ -32,7 +32,8 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <style>
+    <style>       
+
       .container {
         display: flex;        
         justify-content: center;
@@ -212,54 +213,42 @@
       <br />
 
       <br />
+      
       <section id="home" class="fade-in W50">
-        <!--   <div class="happy"><h1 style="text-align: center; font-size: 80px;">Home</h1></div>
-        <div class="bday"><p style="font-weight: bold; text-align: center; font-size: 20px;">Que bom ter você por aqui!</p></div>  -->
+      <div class="container">
+    <img src="./assets/ricardo.jpeg" alt="Ricardo" class="ricardo" />
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <img id="rico" src="./assets/reflita3.jpeg" alt="Rico" class="ricardo" />
+    &nbsp;
+  </div>
+  
+  <br /><br />
+  <div class="box-texto">
+    <h1 class="ricardo-h1 title" style="text-align: center">RICARDO JÚNIOR</h1>
+    <span class="descricao">NUTRICIONISTA CLÍNICO ESPORTIVO</span>
+  </div> 
+  <br /><br /><br />
+  <details class="home">
+    <summary>
+      &nbsp; &nbsp;
+      <div class="typing-container" id="typing-container">
+        <span id="typing-text"></span>
+      </div>
+      <p class="consultoria-text" style="border: 3px solid rgb(6, 76, 24); padding: 10px; margin: 5% 30% 5% 30%; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 18px;">
+        SAIBA MAIS
+      </p>
+    </summary>
+    <p>
+      Por que você deveria me escolher? Então, já fui paciente como você e tinha uma meta em ter resultados, procurei um nutricionista para me ajudar e, no final de tudo, ele só me entregou uma dieta e me deixou sozinho; aquilo veio me frustar, pois não tive nenhuma assistência. Foi então que resolvi entrar na faculdade de Nutrição e de Educação Física; estudei, me formei, e agora vim trazer uma forma inovadora para você! Eu ajudo todos os meus pacientes a chegarem em sua melhor versão, com minha ajuda através do WhatsApp. Sim, é isso mesmo! Eu dou assistência à todos meus pacientes de segunda à sábado, fazendo o acompanhamento de refeições, exercícios e outras demandas do dia a dia.
+      Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente só para você, tudo no pacote, eae?! Está disposto(a) a mudança mesmo? Então acessa meu link e me chama no WhatsApp, clicando
+      <a href="https://wa.me/5581988335498" target="_blank">
+        <mark style="background: white; color: green; padding: 0 5px 0 5px; border-radius: 20px;">aqui</mark>
+      </a>, estou aguardando você!
+    </p>
+  </details>
 
-        <div class="container">
-          <img src="./assets/ricardo.jpeg" alt="Ricardo" class="ricardo" />
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+</section>
 
-          <img
-            id="rico"
-            src="./assets/reflita3.jpeg"
-            alt="Rico"
-            class="ricardo"
-          />
-          &nbsp;
-        </div>
-
-        <br /><br />
-        <div class="box-texto">
-        <h1 class="ricardo-h1 title" style="text-align: center">RICARDO JÚNIOR</h1>
-        <span class="descricao">NUTRICIONISTA CLÍNICO ESPORTIVO</span>
-        </div>
-        <br />
-        <br /><br />
-        <details class="home">
-        <summary>&nbsp; &nbsp;  
-        <div class="typing-container" id="typing-container">
-            <span id="typing-text"></span>
-        </div>
-    </div>
-    </div><p class="consultoria-text" style="border: 3px solid rgb(6, 76, 24); padding: 10px; margin: 5% 30% 5% 30%; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 18px;">SAIBA MAIS</p> </summary>
-Por que você deveria me escolher? Então, já fui paciente como você e tinha uma meta em ter resultados,  procurei um nutricionista para me ajudar e, no final de tudo, ele só me entregou uma dieta e me deixou sozinho; aquilo veio me frustar, pois não tive nenhuma assistência. Foi então que resolvi entrar na faculdade de Nutrição e de Educação Física; estudei, me formei, e agora vim trazer uma forma inovadora para você! 
-Eu ajudo todos os meus pacientes a chegarem em sua melhor versão, com minha ajuda através do WhatsApp. Sim, é isso mesmo! Eu dou assistência à todos meus pacientes de segunda à sábado, fazendo o acompanhamento de refeições, exercícios e outras demandas do dia a dia.
-Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente só para você, tudo no pacote, eae?! Está disposto(a) a mudança mesmo? Então acessa meu link e me chama no WhatsApp, clicando
-          <a href="https://wa.me/5581988335498" target="_blank">
-            <mark
-              style="
-                background: white;
-                color: green;
-                padding: 0 5px 0 5px;
-                border-radius: 20px;
-              "
-              >aqui</mark
-            > </a
-          >, estou aguardando você!
-        </p> <br>
-        </details>
-      </section>
 
       <br /><br />
       <section
@@ -493,8 +482,13 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
     </label>
   </div>
                     
-                     <div class="containerbutton">
+                    <div class="containerbutton">
+    <a href="https://wa.me/5581988335498" target="_blank">
         <button class="animated-button">CONSULTORIA <br> CLICK AQUI</button>
+    </a>
+</div>
+      
+        
     </div>
                 </div>
             </div>
@@ -740,8 +734,5 @@ Ah, e tem mais!!! Você tem direito a uma plataforma de treino exclusivamente s�
         observer.observe(document.getElementById('typing-container'));
     </script>
 
-
-     
-
-  </body>
+ </body>
 </html>
