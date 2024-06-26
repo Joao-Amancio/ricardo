@@ -140,7 +140,7 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: -20px;
+  margin-top: 0px;
 }
 
 /* Estilo do contêiner pai dos contêineres Swiper */
@@ -579,6 +579,7 @@ section.visible {
 
 #biografia {
   margin-top: -50px;
+  margin-bottom: 25px;
 }
 
 #biografia .container1 {
@@ -678,7 +679,7 @@ summary::-webkit-details-marker {
   }
 
   #biografia {
-    margin-top: -50px;
+    margin-top: -35px;
   }
 
   #biografia .box img {
@@ -1538,8 +1539,6 @@ a {
 }
 
 @media (max-width: 768px) {
-  
-
   .carousel4 {
     width: calc(200% + 1px);
     margin-bottom: -15px;
