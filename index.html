@@ -18,6 +18,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    
     <!-- Outros metadados comuns -->
     <meta
       name="description"
@@ -31,6 +32,11 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    
+    
     <link rel="stylesheet" href="./style.css" />
     <style>     
     
@@ -214,6 +220,96 @@
           align-items: center;
         }
       }
+        .visite-instagram {                     
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .visite-instagram p {
+            margin: 0;
+            margin-right: 10px;
+            
+        }
+        .custom-icon {
+            
+            font-size: 45px;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+            animation: pulse 2s infinite;
+            display: inline-block;
+        }
+        .custom-icon:hover {
+            color: #FF5722;
+        }
+
+        i {
+          font-size: 28px;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .visite-instagram {
+                flex-direction: row;
+                text-align: left;
+            }
+            .visite-instagram p {
+                margin-bottom: 0;
+                margin-right: 10px;
+            }            
+        }
+      
+      .typing-container-custom {
+    overflow: hidden;
+    white-space: nowrap;      
+    font-size: 1.5em;
+    display: inline-block; /* Mantém o texto em linha */
+    vertical-align: middle; /* Alinha verticalmente */
+    opacity: 0; /* Inicia com opacidade 0 para ocultar */
+    transition: opacity 0.5s ease; /* Transição suave para a opacidade */
+    width: 100%; /* Ocupa 100% do espaço disponível */
+    max-width: 100%; /* Largura máxima é 100% do espaço disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    padding-right: 0.3em; /* Espaço para simular o cursor */
+    text-align: center; /* Centraliza o texto */
+    
+    
+  }
+
+  /* Estilo opcional para o cursor */
+  .typing-cursor-custom {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1em;
+    animation: blink-caret-custom .75s step-end infinite;
+  }
+
+  /* Animação do cursor */
+  @keyframes blink-caret-custom {
+    from, to { border-color: transparent; }
+     50% { border-color: white; }
+  }
+
+  /* Estilos para responsividade */
+  @media (max-width: 768px) {
+    .typing-container-custom {
+      font-size: 1em; /* Reduz o tamanho da fonte para dispositivos móveis */
+      display: block; /* Exibe o texto em bloco */
+      text-align: left; /* Alinha o texto à esquerda em dispositivos móveis */
+      white-space: normal; /* Permite que o texto quebre linha */
+    }
+  }
+
     </style>
   </head>
   <body>
@@ -532,8 +628,14 @@
         <button class="animated-button">CONSULTORIA <br> CLICK AQUI</button>
     </a>
 </div>
-      
-        
+      <div class="visite-instagram">
+     <p id="text-container-custom" class="typing-container-custom">Para mais resultados, visite o Instagram!<span class="typing-cursor-custom">|</span></p>
+      <i class="fa fa-long-arrow-right"></i>
+      <div id="social-links">
+          <a href="https://instagram.com/ricardojuniornutri" target="_blank">
+            <ion-icon name="logo-instagram" class="custom-icon" ></ion-icon
+          ></a> </div>
+        </div>
     </div>
                 </div>
             </div>
@@ -700,6 +802,11 @@
       }
     });
   </script>
+
+
+       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
      
     <script
       type="module"
@@ -752,8 +859,8 @@
         })
       })
     </script>
-    
-    <script>
+
+     <script>
         const text = "Oi, tudo bem? Me chamo Ricardo Júnior e é um prazer ter você por aqui! Se você veio até mim, não foi em vão. Posso te ajudar da melhor forma e garanto te trazer resultados satisfatórios!";
         let index = 0;
         const speed = 50; // Velocidade da digitação em milissegundos
@@ -779,6 +886,56 @@
         // Configuração do Intersection Observer
         const observer = new IntersectionObserver(startTyping, { threshold: 1.0 });
         observer.observe(document.getElementById('typing-container'));
-    </script>
+    </script>   
+
+    <script>
+  // Função para animar o texto ao ser visualizado
+  function animateTextWhenVisible() {
+    const textElement = document.getElementById('text-container-custom');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateText(textElement); // Chama a função para animar o texto
+          observer.unobserve(entry.target); // Para de observar depois de animar
+        }
+      });
+    });
+
+    // Inicia a observação do elemento
+    observer.observe(textElement);
+  }
+
+  // Função para animar o texto
+  function animateText(element) {
+    const text = element.textContent.trim();
+    element.textContent = ''; // Limpa o conteúdo original
+    element.style.opacity = 1; // Torna o elemento visível
+
+    // Cria um novo elemento span para a animação
+    const span = document.createElement('span');
+    span.style.borderRight = '.15em solid white'; // Adiciona o efeito do cursor
+    span.style.display = 'inline-block'; // Mantém o texto em linha
+    span.style.verticalAlign = 'middle'; // Alinha verticalmente
+    element.appendChild(span);
+
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        span.textContent += text[index];
+        index++;
+        setTimeout(typeWriter, Math.random() * 200 + 100); // Ajustar o tempo de digitação aqui
+      }
+    }
+
+    // Inicia a animação
+    typeWriter();
+  }
+
+  // Chama a função para animar o texto quando o documento estiver carregado
+  document.addEventListener('DOMContentLoaded', animateTextWhenVisible);
+</script>
+
+  
     </body>
 </html>
