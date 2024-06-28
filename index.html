@@ -661,7 +661,7 @@
           </summary>
           <div class="grid-container">
             <div class="video-container">
-              <video width="640" height="360" controls>
+              <video width="640" height="360" controls controlsList="nodownload">
                 <source
                   src="./videos/WhatsApp Video 2024-06-11 at 06.47.32.mp4"
                   type="video/mp4"
@@ -669,7 +669,7 @@
               </video>
             </div>
             <div class="video-container">
-              <video width="640" height="360" controls>
+              <video width="640" height="360" controls controlsList="nodownload">
                 <source
                   src="./videos/WhatsApp Video 2024-06-11 at 06.51.00.mp4"
                   type="video/mp4"
@@ -677,7 +677,7 @@
               </video>
             </div>
             <div class="video-container">
-              <video width="640" height="360" controls>
+              <video width="640" height="360" controls controlsList="nodownload">
                 <source
                   src="./videos/WhatsApp Video 2024-06-11 at 06.51.24.mp4"
                   type="video/mp4"
@@ -685,7 +685,7 @@
               </video>
             </div>
             <div class="video-container">
-              <video width="640" height="360" controls>
+              <video width="640" height="360" controls controlsList="nodownload">
                 <source
                   src="./videos/WhatsApp Video 2024-06-11 at 07.27.16.mp4"
                   type="video/mp4"
@@ -700,9 +700,9 @@
      <section id="no-menu2" class="fade-in w50">
  <div class="carousel">
         <div class="carousel-videos">
-            <video src="./assets/WhatsApp Video 2024-06-20 at 00.32.51.mp4" alt="Slide 1" muted playsinline></video>
-            <video src="./assets/WhatsApp Video 2024-06-19 at 23.51.29.mp4" alt="Slide 2" muted playsinline></video>
-            <video src="./assets/WhatsApp Video 2024-06-19 at 23.37.31.mp4" alt="Slide 3" muted playsinline></video>
+            <video src="./assets/WhatsApp Video 2024-06-20 at 00.32.51.mp4" alt="Slide 1" muted playsinline controls controlsList="nodownload"></video>
+            <video src="./assets/WhatsApp Video 2024-06-19 at 23.51.29.mp4" alt="Slide 2" muted playsinline controls controlsList="nodownload"></video>
+            <video src="./assets/WhatsApp Video 2024-06-19 at 23.37.31.mp4" alt="Slide 3" muted playsinline controls controlsList="nodownload"></video>
         </div>       
     </div> 
     </section>
@@ -934,6 +934,26 @@
 
   // Chama a função para animar o texto quando o documento estiver carregado
   document.addEventListener('DOMContentLoaded', animateTextWhenVisible);
+</script>
+
+<script>
+  //IMAGEM PROTEGIDA
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener('touchstart', function(e) {
+  if (e.touches.length > 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+document.addEventListener('touchend', function(e) {
+  let touchDuration = e.timeStamp - e.changedTouches[0].timeStamp;
+  if (touchDuration > 500) {
+    e.preventDefault();
+  }
+}, { passive: false });
 </script>
 
   
