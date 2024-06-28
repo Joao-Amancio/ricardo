@@ -599,8 +599,11 @@ section.visible {
 }
 
 #biografia .box .text {
- /* margin-right: 80px; */
+  /* margin-right: 80px; */
   text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 #biografia .box .text i {
