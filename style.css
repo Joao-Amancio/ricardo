@@ -1316,7 +1316,7 @@ a {
   font-family: "open_sansregular";
   letter-spacing: 3px;
   /*margin-bottom: 20px;*/
-  margin-top: 20px;
+  /* margin-top: 20px; */
   position: relative;
   animation: motion 3s 1;
 }
@@ -1329,7 +1329,7 @@ a {
   letter-spacing: 3px;
   transition: 6s;
   margin-top: 40px;
-  margin-bottom: -30px;
+  margin-bottom: 0px;
 }
 @keyframes motion {
   0% {
