@@ -573,7 +573,7 @@ section.visible {
 .bio {
   position: relative;
   text-align: center;
-  top: -120px;
+  top: -108px;
   margin-bottom: -100px;
 }
 
@@ -599,7 +599,7 @@ section.visible {
 }
 
 #biografia .box .text {
-  margin-right: 80px;
+ /* margin-right: 80px; */
   text-align: center;
 }
 
