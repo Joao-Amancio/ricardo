@@ -600,7 +600,7 @@ section.visible {
 
 #biografia .box .text {
   /* margin-right: 80px; */
-  text-align: center; 
+  text-align: center;
 }
 
 #biografia .box .text i {
@@ -770,7 +770,7 @@ a {
   .bday4 {
     font-size: 30px;
     text-shadow: 1px 0 10px rgb(0, 255, 76);
-    position: absolute;    
+    position: absolute;
     margin-top: -150px;
   }
 }
@@ -1561,7 +1561,9 @@ a {
 .typing-container {
   border: 1px solid rgb(6, 76, 24); /* Borda sólida verde-azulado */
   padding: 10px; /* Espaçamento interno de 10 pixels */
-  margin: auto; /* Centraliza o contêiner horizontalmente */
+  margin-top: -40px; /* Espaçamento superior de 20 pixels */
+  margin-left: auto; /* Centraliza o contêiner horizontalmente */
+  margin-right: auto; /* Centraliza o contêiner horizontalmente */
   border-radius: 20px; /* Borda arredondada com raio de 20 pixels */
   font-weight: bold; /* Texto em negrito */
   text-align: left; /* Alinha o texto à esquerda */
