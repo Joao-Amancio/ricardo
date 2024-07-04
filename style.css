@@ -1610,6 +1610,42 @@ a {
   }
 }
 
+.container20 {
+  max-width: 800px;
+  margin: 0 auto; /* centraliza o container na página */
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 254, 254, 0.314);
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #1d1c1c07;
+}
+
+th {
+  background-color: #3b3a3a74;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(26, 29, 26);
+}
+
+@media (max-width: 768px) {
+  .container20 {
+    padding: 10px;
+  }
+}
+
 footer {
   font-weight: bold;
 }
