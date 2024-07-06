@@ -819,11 +819,11 @@
           >
         </button>
         <br />
-        Todos os direitos reservados.
+        Volte Sempre!
       </p>
     </footer>
         <div class="whatsapp-button hidden" id="whatsappButton">
-    <a href="https://api.whatsapp.com/send?phone=5581988335498" target="_blank" class="whatsapp-link">
+    <a class="whatsapp-link" href="https://wa.me/5581988335498" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 
@@ -1027,23 +1027,37 @@
 </script>
 
 <script>
-  //IMAGEM PROTEGIDA
+// PROTEÇÃO DE IMAGEM E VIDEO
+
+// Desativa o menu de contexto (botão direito do mouse) para toda a página
 document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
 
-document.addEventListener('touchstart', function(e) {
-  if (e.touches.length > 1) {
-    e.preventDefault();
-  }
-}, { passive: false });
+// Função para desativar toques longos em elementos específicos
+function preventLongPress(element) {
+  element.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 1) {
+      this.touchStartTime = e.timeStamp;
+    }
+  }, { passive: true });
 
-document.addEventListener('touchend', function(e) {
-  let touchDuration = e.timeStamp - e.changedTouches[0].timeStamp;
-  if (touchDuration > 500) {
-    e.preventDefault();
-  }
-}, { passive: false });
+  element.addEventListener('touchend', function(e) {
+    let touchDuration = e.timeStamp - this.touchStartTime;
+    if (touchDuration > 500) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+}
+
+// Aplicar a função nas imagens e vídeos
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.image-container img');
+  const videos = document.querySelectorAll('video');
+
+  images.forEach(img => preventLongPress(img));
+  videos.forEach(video => preventLongPress(video));
+});
 </script>
 
   
