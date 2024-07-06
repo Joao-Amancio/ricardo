@@ -281,6 +281,14 @@ section {
 .menu-icon div:nth-child(3) {
   top: 20px;
 }
+
+/* Efeito de hover */
+.menu-icon:hover div, 
+.menu-icon:focus div, 
+.menu-icon:active div {
+  background-color: #ffcc00; /* cor de hover */
+}
+
 .menu-icon.open div:nth-child(1) {
   transform: rotate(45deg);
   top: 10px;
@@ -305,6 +313,14 @@ section {
   z-index: 2;
   font-weight: bold;
 }
+
+/* Efeito de hover */
+.menu ul li a:hover, 
+.menu ul li a:focus, 
+.menu ul li a:active {
+  color: #ffcc00; /* cor de hover */
+}
+
 .menu.open {
   max-height: 500px;
 }
