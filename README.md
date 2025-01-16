@@ -1,8 +1,8 @@
 #ricardo
 
-# website
+# Dr Ricardo
 
-<h1 align="center"> Meu Site </h1>
+<h1 align="center"> Site do Dr Ricardo </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
